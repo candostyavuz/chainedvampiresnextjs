@@ -54,7 +54,7 @@ export default function Inventory() {
         const items = await Promise.all(data.map(async i => {
             const tokenUri = await contract.tokenURI(i)
             let uri = organizeURI(tokenUri);
-            try{
+            try {
                 const meta = await axios.get(uri)
                 let item = {
                     name: meta.data.name,
@@ -63,10 +63,10 @@ export default function Inventory() {
                     dna: meta.data.attributes[15].value
                 }
                 return item
-            } catch(e) {
+            } catch (e) {
                 window.alert("Freshly minted metadata is currently being loaded!");
             }
-           
+
         }))
         setNfts(items)
     }
@@ -82,12 +82,12 @@ export default function Inventory() {
 
         setCurrNftDNA(str);
         await getEarnedRewards(_edition);
-        
+
     }
 
     const stringToArr = (str) => {
         return str.split(",");
-      };
+    };
 
     async function getEarnedRewards(_edition) {
         const web3Modal = new Web3Modal({
@@ -104,12 +104,13 @@ export default function Inventory() {
         if (formatBalance.includes('.')) {
             const parts = formatBalance.split('.');
             formatBalance = parts[0] + '.' + parts[1].slice(0, 5);
-          }
+        }
         setEarnedNftReward(formatBalance.toString());
     }
 
     function organizeURI(_uri) {
-        const gateWay = "https://gateway.pinata.cloud/ipfs/";
+        // const gateWay = "https://gateway.pinata.cloud/ipfs/";
+        const gateWay = "https://chainedvampires.mypinata.cloud/ipfs/";
         let uri = _uri.toString().substring(7);
         uri = gateWay + uri;
         return uri;
@@ -190,7 +191,7 @@ export default function Inventory() {
                                     whileTap={{ scale: 1.12 }}>
                                     <Link href={`/inventory/?edition=${nft.edition}`} as={`/inventory/${nft.edition}`} key={nft.edition}>
                                         <a className={styles.nftLabel} onClick={() => getNFTImg(nft.edition)}>
-                                            <Image className={styles.nftImages} src={nft.image} alt="loading" width={350} height={350} objectFit="cover" placeholder="blur" blurDataURL={nft.image}/>
+                                            <Image className={styles.nftImages} src={nft.image} alt="loading" width={350} height={350} objectFit="cover" placeholder="blur" blurDataURL={nft.image} />
                                             <p className={styles.nftLabel}>{nft.name}</p>
                                         </a>
                                     </Link>
