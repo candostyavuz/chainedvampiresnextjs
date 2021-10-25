@@ -1,12 +1,8 @@
-
-const withOptimizedImages = require('next-optimized-images');
-
-module.exports = withOptimizedImages({
-  /* config for next-optimized-images */
+module.exports = {
   reactStrictMode: true,
   images: {
-    // domains: ['gateway.pinata.cloud'],
-    domains: ['chainedvampires.mypinata.cloud'],
+    loader: "imgix",
+    path: "",
+    domains: ['gateway.pinata.cloud'],
   },
-  // your config for other plugins or the general next.js here...
-});
+}
