@@ -1,16 +1,57 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
+/* @import url("https://fonts.googleapis.com");
+@import url("https://fonts.gstatic.com");
+@import url("https://fonts.googleapis.com/css2?family=Hina+Mincho&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel&display=swap"); */
 
 * {
-  box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Hina Mincho", serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+.content {
+    margin: 0 auto;
+  }
+
+body {
+    background-color: rgb(56, 56, 56);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    position:fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 5rem;
+    background: rgba(41, 5, 5, 0.7);
+}
+
+nav ul{
+    list-style: none;
+    width: 100%;
+    justify-content: center;
+    position:relative;
+    right: 3%;
+ }
+
+nav a {
+    color: white;
+    font-size: 2rem;
+    text-decoration: none;
+    padding: 0.4rem;
+    margin-left: 0.4rem;
+    text-align: center;
+}
+
+@media (max-width: 1242px) {
+    .nav a {
+        font-size: 25px;
+    }
 }

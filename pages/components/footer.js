@@ -1,0 +1,37 @@
+import Image from 'next/image'
+import { useEffect } from 'react';
+
+
+const Footer = () => {
+
+    return (
+        <div className="footer"> 
+            <a href="https://twitter.com/chainedvampires">
+                <Image src="/twitter.png" alt="twitterlogo" width={60} height={60} />
+            </a>   
+            <a href="https://www.pinata.cloud">
+                <Image src="/pinata.png" alt="twitterlogo" width={60} height={60} />
+            </a>    
+            <a href="https://www.avax.network/">
+                <Image src="/avax.png" alt="twitterlogo" width={60} height={60} />
+            </a>  
+            <style jsx>{`
+                .footer{
+                    background: linear-gradient(rgba(21, 4, 3, 0.747), rgba(63, 0, 0, 0.87));
+                    text-align:center;
+                    display:flex;
+                    justify-content:center;
+                }
+                p{
+                    font-family: 'Cinzel', serif;
+                    color:white;
+                }
+                a{
+                    margin-right:2%;
+                }
+            `}</style>
+        </div>
+    );
+}
+
+export default Footer;
