@@ -100,7 +100,6 @@ export default function Home() {
   async function getUserInfo() {
     const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
     const account = accounts[0];
-    console.log(account)
     if (accounts[0] !== undefined) {
       setAccountAddress(account);
       getUserBalance(account);
@@ -108,7 +107,6 @@ export default function Home() {
       setMetamaskState('not-set');
     }
     window.ethereum.on('accountsChanged', async function (accounts) {
-      console.log("account exists:" + accounts[0]);
       // Time to reload your interface with accounts[0]!
       setAccountAddress(accounts[0]);
       getUserBalance(accounts[0]);
@@ -173,7 +171,6 @@ export default function Home() {
     const transaction = await contract.claimRewardAll();
     await transaction.wait();
 
-    console.log("rewards are successfully claimed!");
     getUserRewards();
   }
 
@@ -187,7 +184,6 @@ export default function Home() {
     const signer = provider.getSigner();
     const contract = new ethers.Contract(nftaddress, NFT.abi, signer);
     const currentTokenId = await contract.getCurrentTokenId();
-    console.log(currentTokenId.toString());
     setTokenId(currentTokenId.toString());
     // return currentTokenId.toString();
   }
@@ -209,7 +205,6 @@ export default function Home() {
       formatReward = parts[0] + '.' + parts[1].slice(0, 2);
     }
 
-    console.log(formatReward.toString());
     setUserRewards(formatReward.toString() + " AVAX");
 
     const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
