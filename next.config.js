@@ -2,7 +2,7 @@ module.exports = {
   reactStrictMode: true,
   images: {
     loader: "imgix",
-    path: "",
+    path: "/",
     domains: ['gateway.pinata.cloud'],
   },
 }
