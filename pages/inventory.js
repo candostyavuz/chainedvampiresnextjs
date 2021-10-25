@@ -171,11 +171,11 @@ export default function Inventory() {
                                 </Link>
                             </li>
                             <li className={styles.navlinksulli}>
-                                <Link href="/marketplace">
-                                    <a className={styles.navlinksullia}>
-                                        Marketplace
-                                    </a>
-                                </Link>
+                                {/* <Link href="/marketplace" >
+                                <a className={styles.navlinksullia}> */}
+                                <div className={styles.navlinksulliaDisabled}>Marketplace</div>
+                                {/* </a>
+                                </Link> */}
                             </li>
                         </ul>
                     </div>
@@ -202,7 +202,7 @@ export default function Inventory() {
                 </div>
 
                 <div className={styles.warningBox}>
-                    <h3 className={styles.inventoryh1}>We do not use any centralized server to store NFTs.</h3>
+                    <h3 className={styles.inventoryh1}>We do not use any centralized servers to store NFTs.</h3>
                     <h4 className={styles.inventoryh1}>So please be patient while your data is being fetched from Decentralized networks.</h4>
                 </div>
 

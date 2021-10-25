@@ -15,7 +15,7 @@ import NFT from '../abi.json';
 export default function Home() {
   const [metamaskState, setMetamaskState] = useState('not-set');
   const [accountAddress, setAccountAddress] = useState("not-set");
-  const [userBalance, setUserBalance] = useState('not-set');
+  const [userBalance, setUserBalance] = useState('-');
   const [tokenId, setTokenId] = useState('0');
   const [userRewards, setUserRewards] = useState("0");
   const [mintAmount, setMintAmount] = useState(1);
