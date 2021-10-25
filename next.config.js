@@ -1,8 +1,8 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    loader: "imgix",
+    loader: "akamai",
     path: "/",
-    domains: ['gateway.pinata.cloud'],
+    domains: ['chainedvampires.mypinata.cloud'],
   },
 }
