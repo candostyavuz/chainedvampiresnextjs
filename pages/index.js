@@ -368,7 +368,7 @@ export default function Home() {
 
         </div>
 
-        <h1 className={styles.mttext}> 1.5 AVAX / Vampire </h1>
+        <h1 className={styles.mttext}> 1 AVAX / Vampire </h1>
         <p className={styles.mttext2}> Summon 5 at once: receive 1 more </p>
         <p className={styles.mttext2}> Summon 10 at once: receive 2 more</p>
         <p className={styles.mttext2}> Summon 15 at once: receive 4 more</p>
@@ -412,7 +412,7 @@ export default function Home() {
           <div className={styles.aboutcol}>
             <h3>WHY ?</h3>
             <p className={styles.pclass}>
-              Low minting fee:<span className={styles.pclassWhite}>1.5 AVAX</span></p>
+              Low minting fee:<span className={styles.pclassWhite}>1 AVAX</span></p>
             <p className={styles.pclass}>
               High reflection rates.</p>
             <p className={styles.pclass}>
