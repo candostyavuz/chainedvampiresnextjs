@@ -26,6 +26,7 @@ export default function Inventory() {
     const [currNftRarity, setCurrNftRarity] = useState('not-set');
     const [earnedNftReward, setEarnedNftReward] = useState('0');
     const [currNftDNA, setCurrNftDNA] = useState('not-set');
+    const [showburger, setShowBurger] = useState(false);
 
 
     useEffect(() => {
@@ -37,6 +38,10 @@ export default function Inventory() {
         setCurrNftImg("/public/coffin.jpg")
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
+
+    function showBurgerMenu() {
+        setShowBurger(!showburger);
+    }
 
 
     async function getUserNFTs() {
@@ -178,6 +183,25 @@ export default function Inventory() {
                                 </Link> */}
                             </li>
                         </ul>
+                    </div>
+                    <div className={styles.hamburgerMenu} onClick={() => showBurgerMenu()}>
+                        <Image src="/menuicon.png" alt="menuicon" width={45} height={30} />
+                        {
+                            showburger &&
+                            <div className={styles.dropdownContent}>
+                                <Link href="/">
+                                    <a className={styles.dropdownContentA}>
+                                        Home
+                                    </a>
+                                </Link>
+                                <Link href="/inventory">
+                                    <a className={styles.dropdownContentA}>
+                                        Inventory
+                                    </a>
+                                </Link>
+                            </div>
+                        }
+
                     </div>
                 </nav>
                 <div className={styles.inventoryImages}>

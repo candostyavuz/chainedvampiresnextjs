@@ -19,6 +19,7 @@ export default function Home() {
   const [tokenId, setTokenId] = useState('0');
   const [userRewards, setUserRewards] = useState("0");
   const [mintAmount, setMintAmount] = useState(1);
+  const [showburger, setShowBurger] = useState(false);
   // setLoadingState(
 
   useEffect(() => {
@@ -49,6 +50,10 @@ export default function Home() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+
+  function showBurgerMenu() {
+    setShowBurger(!showburger);
+  }
 
   async function checkWeb3() {
     // Check if Web3 has been injected by the browser (Mist/MetaMask).
@@ -250,7 +255,7 @@ export default function Home() {
                 </Link>
               </li>
               <li className={styles.navlinksulli}>
-                <div className={styles.navlinksulliaDisabled}>Marketplace</div>     
+                <div className={styles.navlinksulliaDisabled}>Marketplace</div>
               </li>
 
               <span className={styles.claim}>
@@ -261,6 +266,26 @@ export default function Home() {
                 </button>
               </span>
             </ul>
+          </div>
+
+          <div className={styles.hamburgerMenu} onClick={() => showBurgerMenu()}>
+            <Image src="/menuicon.png" alt="menuicon" width={45} height={30} />
+            {
+              showburger &&
+              <div className={styles.dropdownContent}>
+                <Link href="#home">
+                  <a className={styles.dropdownContentA}>
+                    Home
+                  </a>
+                </Link>
+                <Link href="/inventory">
+                  <a className={styles.dropdownContentA}>
+                    Inventory
+                  </a>
+                </Link>
+              </div>
+            }
+
           </div>
         </nav>
 
