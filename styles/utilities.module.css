@@ -36,6 +36,33 @@
     border-radius: 5%;
 }
 
+.familyImages{
+    background: linear-gradient(rgba(21, 4, 3, 0.747), rgba(0, 0, 0, 0.87), rgba(0, 0, 0, 0.87)),url(../public/familytexture.jpg);
+    background-position: center;
+    background-size:cover;
+    background-repeat: repeat-y;
+    display: flex;
+    flex-wrap:wrap;
+    margin-top: 2rem;
+}
+
+.nftimageDiv{
+    flex: 1 1 20%;
+    padding: 5px; 
+    padding-bottom: 4rem;
+    text-align: center;
+}
+
+.nftimageDivDrx{
+    flex: 40%; 
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    text-align: center;
+}
+
+.nftImages2{
+    border-radius: 5%;
+}
 
 .inventoryModal{
     margin-top: 8rem;
@@ -547,7 +574,7 @@
     font-family: 'Cinzel', serif;
 }
 .mttext2 {
-    color: rgb(201, 144, 144);
+    color: rgb(192, 68, 68);
     position: relative;
     left: 90%;
     bottom: 19rem;

@@ -443,7 +443,130 @@ export default function Home() {
         <h1 className={styles.familyh1}> RACES</h1>
         <p className={styles.pclass4}>Each vampire is unique. Some attributes are only available to certain races.</p>
         <p className={styles.pclass4}>Over 200 different attributes available for both male and female vampires.</p>
-        <Image src="/racetree.png" alt="raceTree" width={2000} height={2300} />
+        {/* <Image src="/racetree.png" alt="raceTree" width={2000} height={2300} /> */}
+        <div className={styles.familyImages}>
+
+          <div className={styles.nftimageDiv} >
+            <motion.div whileHover={{
+              scale: 1.1,
+              transition: { duration: .5 },
+            }}
+              whileTap={{ scale: 1.12 }}>
+                <Image className={styles.nftImages2} src="/sc-m.png" alt="loading" width={300} height={300} objectFit="cover" />
+                <p className={styles.nftLabel}>Scavenger Male</p>
+            </motion.div>
+          </div>
+
+          <div className={styles.nftimageDiv} >
+            <motion.div whileHover={{
+              scale: 1.1,
+              transition: { duration: .5 },
+            }}
+              whileTap={{ scale: 1.12 }}>
+                <Image className={styles.nftImages2} src="/sc-f.png" alt="loading" width={300} height={300} objectFit="cover" />
+                <p className={styles.nftLabel}>Scavenger Female</p>
+            </motion.div>
+          </div>
+
+          <div className={styles.nftimageDiv} >
+            <motion.div whileHover={{
+              scale: 1.1,
+              transition: { duration: .5 },
+            }}
+              whileTap={{ scale: 1.12 }}>
+                <Image className={styles.nftImages2} src="/pre-m.png" alt="loading" width={300} height={300} objectFit="cover" />
+                <p className={styles.nftLabel}>Predator Male</p>
+            </motion.div>
+          </div>
+
+          <div className={styles.nftimageDiv} >
+            <motion.div whileHover={{
+              scale: 1.1,
+              transition: { duration: .5 },
+            }}
+              whileTap={{ scale: 1.12 }}>
+                <Image className={styles.nftImages2} src="/pre-f.png" alt="loading" width={300} height={300} objectFit="cover" />
+                <p className={styles.nftLabel}>Predator Female</p>
+            </motion.div>
+          </div>
+
+          <div className={styles.nftimageDiv} >
+            <motion.div whileHover={{
+              scale: 1.1,
+              transition: { duration: .5 },
+            }}
+              whileTap={{ scale: 1.12 }}>
+                <Image className={styles.nftImages2} src="/nos-m.png" alt="loading" width={300} height={300} objectFit="cover" />
+                <p className={styles.nftLabel}>Nosferatu Male</p>
+            </motion.div>
+          </div>
+
+          <div className={styles.nftimageDiv} >
+            <motion.div whileHover={{
+              scale: 1.1,
+              transition: { duration: .5 },
+            }}
+              whileTap={{ scale: 1.12 }}>
+                <Image className={styles.nftImages2} src="/nos-f.png" alt="loading" width={300} height={300} objectFit="cover" />
+                <p className={styles.nftLabel}>Nosferatu Female</p>
+            </motion.div>
+          </div>
+
+          <div className={styles.nftimageDiv} >
+            <motion.div whileHover={{
+              scale: 1.1,
+              transition: { duration: .5 },
+            }}
+              whileTap={{ scale: 1.12 }}>
+                <Image className={styles.nftImages2} src="/eld-m.png" alt="loading" width={300} height={300} objectFit="cover" />
+                <p className={styles.nftLabel}>Elder Male</p>
+            </motion.div>
+          </div>
+
+          <div className={styles.nftimageDiv} >
+            <motion.div whileHover={{
+              scale: 1.1,
+              transition: { duration: .5 },
+            }}
+              whileTap={{ scale: 1.12 }}>
+                <Image className={styles.nftImages2} src="/eld-f.png" alt="loading" width={300} height={300} objectFit="cover" />
+                <p className={styles.nftLabel}>Elder Female</p>
+            </motion.div>
+          </div>
+
+          <div className={styles.nftimageDivDrx} >
+            <motion.div whileHover={{
+              scale: 1.1,
+              transition: { duration: .5 },
+            }}
+              whileTap={{ scale: 1.12 }}>
+                <Image className={styles.nftImages2} src="/drx-m.png" alt="loading" width={350} height={350} objectFit="cover" />
+                <p className={styles.nftLabel}>Draxo Male</p>
+            </motion.div>
+          </div>
+
+          <div className={styles.nftimageDivDrx} >
+            <motion.div whileHover={{
+              scale: 1.1,
+              transition: { duration: .5 },
+            }}
+              whileTap={{ scale: 1.12 }}>
+                <Image className={styles.nftImages2} src="/drx-f.png" alt="loading" width={350} height={350} objectFit="cover" />
+                <p className={styles.nftLabel}>Draxo Female</p>
+            </motion.div>
+          </div>
+
+          <div className={styles.nftimageDivDrx} >
+            <motion.div whileHover={{
+              scale: 1.1,
+              transition: { duration: .5 },
+            }}
+              whileTap={{ scale: 1.12 }}>
+                <Image className={styles.nftImages2} src="/DRACULA.png" alt="loading" width={400} height={400} objectFit="cover" />
+                <p className={styles.nftLabel}>LORD DRACULA</p>
+            </motion.div>
+          </div>
+        </div>
       </section>
 
       <Footer />
