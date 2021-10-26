@@ -3,7 +3,7 @@
     height: 100vh;
     width: 100%;
     background-image: linear-gradient(rgba(17, 32, 147, 0.747), rgba(63, 0, 0, 0.87)),url(../public/bg1.jpg);
-    background-position: center;
+    background-position:center;
     background-size: cover;
 }
 
@@ -182,9 +182,15 @@
     color: rgb(255, 255, 255);
     font-family: 'Cinzel', serif;
     text-decoration: none;
-    font-weight:normal;
     text-align: center;
     line-height: 1.8;
+  }
+
+  @media screen and (max-width:500px) {
+    .pclass6 {
+        font-size: small;
+    }
+  
   }
 
 .familyTree{
@@ -322,7 +328,7 @@
 }
 .textbox2h1 {
     color: white;
-    font-size: 4.5rem;
+    font-size: 4rem;
     font-family: 'Cinzel', serif;
     margin-bottom: .5rem;
 }
@@ -559,10 +565,31 @@
 }
 
 .mintitemsimgdiv{
-    margin-top: 10rem;
-    margin-left: 14rem;
-    min-width: 240px;
+    padding-bottom: 2rem;
+    margin-top: 19rem;
+    margin-left: 12rem;
+    min-width: 300px;
 }
+
+
+@media (max-width: 900px) {
+    .mintitemsimgdiv{
+        padding-bottom: 2rem;
+        margin-top: 2rem;
+        margin-left: 25rem;
+        min-width: 450px;
+    }
+}
+
+@media (max-width: 450px) {
+    .mintitemsimgdiv{
+        padding-bottom: 2rem;
+        margin-top: 2rem;
+        margin-left: 12rem;
+        min-width: 350px;
+    }
+}
+
 
 .mttext {
     color: white;
@@ -650,16 +677,12 @@
 
 /*+ - buttons */
 
+
 @media (max-width:912px){
-    
-    .mintitemsimg{
-        height: 20rem;
-        left: 50%;
-        top: 1px;
-    }
+
     .mtbox {
         position: relative;
-        left: 50%;
+        left: 45%;
         bottom:10px;
         display: flex;
         align-items: center;
@@ -672,6 +695,7 @@
     .mttext2 {
         left: 50%;
         bottom: 1%;
+        width: 180%;
     }
 }
 
