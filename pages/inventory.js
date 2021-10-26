@@ -68,7 +68,7 @@ export default function Inventory() {
             }
 
         }))
-        setNfts(items)
+        setNfts(items);
     }
 
     async function getNFTImg(_edition) {

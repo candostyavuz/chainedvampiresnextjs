@@ -29,7 +29,7 @@ export default function Home() {
   useEffect(() => {
     getUserInfo();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  });
 
   useEffect(() => {
     console.log(metamaskState);
@@ -37,7 +37,7 @@ export default function Home() {
 
   useEffect(() => {
     getCurrentTokenId();
-  }, []);
+  });
 
   useEffect(() => {
     getUserRewards();
@@ -106,6 +106,7 @@ export default function Home() {
     } else {
       setMetamaskState('not-set');
     }
+    console.log("user info fetched!");
     window.ethereum.on('accountsChanged', async function (accounts) {
       // Time to reload your interface with accounts[0]!
       setAccountAddress(accounts[0]);
@@ -150,7 +151,6 @@ export default function Home() {
     console.log("minting is complete!");
 
     const currentTokenId = await contract.getCurrentTokenId();
-    console.log(currentTokenId.toString());
     setTokenId(currentTokenId.toString());
     getUserRewards();
     const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
@@ -185,6 +185,8 @@ export default function Home() {
     const contract = new ethers.Contract(nftaddress, NFT.abi, signer);
     const currentTokenId = await contract.getCurrentTokenId();
     setTokenId(currentTokenId.toString());
+    console.log("Current minted amount:" + currentTokenId.toString());
+
     // return currentTokenId.toString();
   }
 
@@ -350,7 +352,7 @@ export default function Home() {
 
         <div className={styles.mtbox}>
           <div className={styles.mtboxA}>
-            <input onKeyDown={(e) => {e.preventDefault()}} id="mintBar" className={styles.inputclass} type="number" min="1" max="20" value={mintAmount} onChange={(event) => updateMintAmount(event)} />
+            <input onKeyDown={(e) => { e.preventDefault() }} id="mintBar" className={styles.inputclass} type="number" min="1" max="20" value={mintAmount} onChange={(event) => updateMintAmount(event)} />
           </div>
 
           <div >{metamaskState == 'set' ?
