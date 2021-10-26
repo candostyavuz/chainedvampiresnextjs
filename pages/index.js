@@ -37,7 +37,7 @@ export default function Home() {
 
   useEffect(() => {
     getCurrentTokenId();
-  });
+  }, [tokenId]);
 
   useEffect(() => {
     getUserRewards();
@@ -242,20 +242,6 @@ export default function Home() {
                   </a>
                 </Link>
               </li>
-              {/* <li className={styles.navlinksulli}>
-                <Link href="#mint">
-                  <a className={styles.navlinksullia}>
-                    Mint
-                  </a>
-                </Link>
-              </li>
-              <li className={styles.navlinksulli}>
-                <Link href="#about">
-                  <a className={styles.navlinksullia}>
-                    About
-                  </a>
-                </Link>
-              </li> */}
               <li className={styles.navlinksulli}>
                 <Link href="/inventory">
                   <a className={styles.navlinksullia}>
@@ -264,11 +250,7 @@ export default function Home() {
                 </Link>
               </li>
               <li className={styles.navlinksulli}>
-                {/* <Link href="/marketplace" >
-                  <a className={styles.navlinksullia}> */}
-                <div className={styles.navlinksulliaDisabled}>Marketplace</div>
-                {/* </a>
-                </Link> */}
+                <div className={styles.navlinksulliaDisabled}>Marketplace</div>     
               </li>
 
               <span className={styles.claim}>
@@ -280,7 +262,6 @@ export default function Home() {
               </span>
             </ul>
           </div>
-
         </nav>
 
         <div className={styles.textbox}>

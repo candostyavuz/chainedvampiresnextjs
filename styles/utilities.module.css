@@ -95,7 +95,6 @@
 }
 
 .logosection {
-    display:inline-flex;
     position: relative;
     white-space: nowrap;
     max-width: 100%;
