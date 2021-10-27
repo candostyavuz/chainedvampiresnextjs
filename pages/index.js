@@ -147,13 +147,19 @@ export default function Home() {
       console.log(e);
     }
 
-    let mintFee = await ethers.utils.formatEther(price);
-    mintFee *= mintAmount;
-    mintFee = await ethers.utils.parseEther(mintFee.toString());
+    let mintFee_format = await ethers.utils.formatEther(price);
+    mintFee_format *= mintAmount;
+    let mintFee = await ethers.utils.parseEther(mintFee_format.toString());
 
-    const transaction = await contract.summonVampire(mintAmount, { value: mintFee });
-    await transaction.wait();
-    console.log("minting is complete!");
+    try {
+      const transaction = await contract.summonVampire(mintAmount, { value: mintFee });
+      await transaction.wait();
+      console.log("minting is complete!");
+    } catch (e) {
+      if(e.data.message.toString().includes("insufficient funds")){
+        window.alert("Insufficent funds in your wallet! You need: " + mintFee_format.toString() + " AVAX!");
+      }
+    }
 
     const currentTokenId = await contract.getCurrentTokenId();
     setTokenId(currentTokenId.toString());
@@ -388,16 +394,16 @@ export default function Home() {
           <div className={styles.aboutcol}>
             <h3>TOKENOMICS</h3>
             <p className={styles.pclass}>
-              Reflectionary minting system distributes<span className={styles.pclassWhite}>12%</span>of each minting fee to all existing vampires.
+              Reflectionary minting system distributes<span className={styles.pclassWhite}>20%</span>of each minting fee to all existing vampires.
             </p>
             <p className={styles.pclass}>
-              Vampires care a lot about their original minters. Minter gains <span className={styles.pclassWhite}>%2</span>life-time royalty.
+              Vampires care a lot about their original minters. Minter gains <span className={styles.pclassWhite}>%5</span>life-time royalty.
             </p>
             <p className={styles.pclass}>
               Each sale in the Market Place reflects<span className={styles.pclassWhite}>%4</span>distributed to all owners.
             </p>
             <p className={styles.pclassWhite}>
-              Earlier you mint and more Vampire you have, more AVAX reflections you get.
+              Earlier you mint and more Vampires you have, more AVAX reflections you get.
             </p>
           </div>
 
@@ -435,7 +441,7 @@ export default function Home() {
 
       <section className={styles.roadmap}>
         <h1 className={styles.racesh1}> Roadmap</h1>
-        <h2 className={styles.pclass4}> act-1</h2>
+        <h2 className={styles.pclass4}> ACT-1</h2>
         <Image src="/roadmap.png" alt="roadmap" width={3983} height={1125} />
       </section>
 
@@ -452,8 +458,8 @@ export default function Home() {
               transition: { duration: .5 },
             }}
               whileTap={{ scale: 1.12 }}>
-                <Image className={styles.nftImages2} src="/sc-m.png" alt="loading" width={300} height={300} objectFit="cover" />
-                <p className={styles.nftLabel}>Scavenger Male</p>
+              <Image className={styles.nftImages2} src="/sc-m.png" alt="loading" width={300} height={300} objectFit="cover" />
+              <p className={styles.nftLabel}>Scavenger Male</p>
             </motion.div>
           </div>
 
@@ -463,8 +469,8 @@ export default function Home() {
               transition: { duration: .5 },
             }}
               whileTap={{ scale: 1.12 }}>
-                <Image className={styles.nftImages2} src="/sc-f.png" alt="loading" width={300} height={300} objectFit="cover" />
-                <p className={styles.nftLabel}>Scavenger Female</p>
+              <Image className={styles.nftImages2} src="/sc-f.png" alt="loading" width={300} height={300} objectFit="cover" />
+              <p className={styles.nftLabel}>Scavenger Female</p>
             </motion.div>
           </div>
 
@@ -474,8 +480,8 @@ export default function Home() {
               transition: { duration: .5 },
             }}
               whileTap={{ scale: 1.12 }}>
-                <Image className={styles.nftImages2} src="/pre-m.png" alt="loading" width={300} height={300} objectFit="cover" />
-                <p className={styles.nftLabel}>Predator Male</p>
+              <Image className={styles.nftImages2} src="/pre-m.png" alt="loading" width={300} height={300} objectFit="cover" />
+              <p className={styles.nftLabel}>Predator Male</p>
             </motion.div>
           </div>
 
@@ -485,8 +491,8 @@ export default function Home() {
               transition: { duration: .5 },
             }}
               whileTap={{ scale: 1.12 }}>
-                <Image className={styles.nftImages2} src="/pre-f.png" alt="loading" width={300} height={300} objectFit="cover" />
-                <p className={styles.nftLabel}>Predator Female</p>
+              <Image className={styles.nftImages2} src="/pre-f.png" alt="loading" width={300} height={300} objectFit="cover" />
+              <p className={styles.nftLabel}>Predator Female</p>
             </motion.div>
           </div>
 
@@ -496,8 +502,8 @@ export default function Home() {
               transition: { duration: .5 },
             }}
               whileTap={{ scale: 1.12 }}>
-                <Image className={styles.nftImages2} src="/nos-m.png" alt="loading" width={300} height={300} objectFit="cover" />
-                <p className={styles.nftLabel}>Nosferatu Male</p>
+              <Image className={styles.nftImages2} src="/nos-m.png" alt="loading" width={300} height={300} objectFit="cover" />
+              <p className={styles.nftLabel}>Nosferatu Male</p>
             </motion.div>
           </div>
 
@@ -507,8 +513,8 @@ export default function Home() {
               transition: { duration: .5 },
             }}
               whileTap={{ scale: 1.12 }}>
-                <Image className={styles.nftImages2} src="/nos-f.png" alt="loading" width={300} height={300} objectFit="cover" />
-                <p className={styles.nftLabel}>Nosferatu Female</p>
+              <Image className={styles.nftImages2} src="/nos-f.png" alt="loading" width={300} height={300} objectFit="cover" />
+              <p className={styles.nftLabel}>Nosferatu Female</p>
             </motion.div>
           </div>
 
@@ -518,8 +524,8 @@ export default function Home() {
               transition: { duration: .5 },
             }}
               whileTap={{ scale: 1.12 }}>
-                <Image className={styles.nftImages2} src="/eld-m.png" alt="loading" width={300} height={300} objectFit="cover" />
-                <p className={styles.nftLabel}>Elder Male</p>
+              <Image className={styles.nftImages2} src="/eld-m.png" alt="loading" width={300} height={300} objectFit="cover" />
+              <p className={styles.nftLabel}>Elder Male</p>
             </motion.div>
           </div>
 
@@ -529,8 +535,8 @@ export default function Home() {
               transition: { duration: .5 },
             }}
               whileTap={{ scale: 1.12 }}>
-                <Image className={styles.nftImages2} src="/eld-f.png" alt="loading" width={300} height={300} objectFit="cover" />
-                <p className={styles.nftLabel}>Elder Female</p>
+              <Image className={styles.nftImages2} src="/eld-f.png" alt="loading" width={300} height={300} objectFit="cover" />
+              <p className={styles.nftLabel}>Elder Female</p>
             </motion.div>
           </div>
 
@@ -540,8 +546,8 @@ export default function Home() {
               transition: { duration: .5 },
             }}
               whileTap={{ scale: 1.12 }}>
-                <Image className={styles.nftImages2} src="/drx-m.png" alt="loading" width={350} height={350} objectFit="cover" />
-                <p className={styles.nftLabel}>Draxo Male</p>
+              <Image className={styles.nftImages2} src="/drx-m.png" alt="loading" width={350} height={350} objectFit="cover" />
+              <p className={styles.nftLabel}>Draxo Male</p>
             </motion.div>
           </div>
 
@@ -551,8 +557,8 @@ export default function Home() {
               transition: { duration: .5 },
             }}
               whileTap={{ scale: 1.12 }}>
-                <Image className={styles.nftImages2} src="/drx-f.png" alt="loading" width={350} height={350} objectFit="cover" />
-                <p className={styles.nftLabel}>Draxo Female</p>
+              <Image className={styles.nftImages2} src="/drx-f.png" alt="loading" width={350} height={350} objectFit="cover" />
+              <p className={styles.nftLabel}>Draxo Female</p>
             </motion.div>
           </div>
 
@@ -562,8 +568,8 @@ export default function Home() {
               transition: { duration: .5 },
             }}
               whileTap={{ scale: 1.12 }}>
-                <Image className={styles.nftImages2} src="/DRACULA.png" alt="loading" width={400} height={400} objectFit="cover" />
-                <p className={styles.nftLabel}>LORD DRACULA</p>
+              <Image className={styles.nftImages2} src="/DRACULA.png" alt="loading" width={400} height={400} objectFit="cover" />
+              <p className={styles.nftLabel}>LORD DRACULA</p>
             </motion.div>
           </div>
         </div>

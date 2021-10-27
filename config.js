@@ -1,4 +1,4 @@
-export const nftaddress = "0x417a8722b75251a2BCfC6807717836Bb905c764f";
+export const nftaddress = "0x926a8416e6a45a678E50090617D2831bb74d8031";
 
 export const AVALANCHE_TESTNET_PARAMS = {
     chainId: '0xA869',
