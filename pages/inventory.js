@@ -21,6 +21,7 @@ export default function Inventory() {
     const router = useRouter();
 
     const [nfts, setNfts] = useState([]);
+    const [loaded, setLoaded] = useState('not-set');
     const [currNftImg, setCurrNftImg] = useState('not-set');
     const [currNftName, setCurrNftName] = useState('not-set');
     const [currNftRarity, setCurrNftRarity] = useState('not-set');
@@ -74,6 +75,7 @@ export default function Inventory() {
 
         }))
         setNfts(items);
+        setLoaded('set');
     }
 
     async function getNFTImg(_edition) {
@@ -204,32 +206,49 @@ export default function Inventory() {
 
                     </div>
                 </nav>
-                <div className={styles.inventoryImages}>
-                    {
-                        nfts.map((nft, i) => (
-                            <div key={i} className={styles.inventoryImages2} >
-                                <motion.div whileHover={{
-                                    scale: 1.1,
-                                    transition: { duration: .5 },
-                                }}
-                                    whileTap={{ scale: 1.12 }}>
-                                    <Link href={`/inventory/?edition=${nft.edition}`} as={`/inventory/${nft.edition}`} key={nft.edition}>
-                                        <a className={styles.nftLabel} onClick={() => getNFTImg(nft.edition)}>
-                                            <Image className={styles.nftImages} src={nft.image} alt="loading" width={350} height={350} objectFit="cover" placeholder="blur" blurDataURL={nft.image} />
-                                            <p className={styles.nftLabel}>{nft.name}</p>
-                                        </a>
-                                    </Link>
-                                </motion.div>
+                {
+                    loaded == 'set' && nfts.length == 0 ?
+                        <>
+                            <div className={styles.inventoryemptyh1}>Your inventory is empty. <br /> Claim yours on homepage.
+                                <Image className={styles.inventoryemptimg} src="/candle.png" alt="loading" width={150} height={150} objectFit="cover" />
                             </div>
-                        ))
-                    }
-                </div>
+                            <Footer />
 
-                <div className={styles.warningBox}>
-                    <h3 className={styles.inventoryh1}>We do not use any centralized servers to store NFTs.</h3>
-                    <h4 className={styles.inventoryh1}>So please be patient while your data is being fetched from Decentralized networks.</h4>
-                </div>
+                        </>
+                        :
+                        <>
+                            <div className={styles.inventoryImages}>
+                                {
+                                    nfts.map((nft, i) => (
+                                        <div key={i} className={styles.inventoryImages2} >
+                                            <motion.div whileHover={{
+                                                scale: 1.1,
+                                                transition: { duration: .5 },
+                                            }}
+                                                whileTap={{ scale: 1.12 }}>
+                                                <Link href={`/inventory/?edition=${nft.edition}`} as={`/inventory/${nft.edition}`} key={nft.edition}>
+                                                    <a className={styles.nftLabel} onClick={() => getNFTImg(nft.edition)}>
+                                                        <Image className={styles.nftImages} src={nft.image} alt="loading" width={350} height={350} objectFit="cover" placeholder="blur" blurDataURL={nft.image} />
+                                                        <p className={styles.nftLabel}>{nft.name}</p>
+                                                    </a>
+                                                </Link>
+                                            </motion.div>
+                                        </div>
+                                    ))
+                                }
+                            </div>
 
+                            <div className={styles.warningBox}>
+                                <h3 className={styles.inventoryh1}>We do not use any centralized servers to store NFTs.</h3>
+                                <h4 className={styles.inventoryh1}>So please be patient while your data is being fetched from Decentralized networks.</h4>
+                            </div>
+
+                            <Footer />
+
+                        </>
+                        
+                }
+                
                 <Modal className={styles.inventoryModal} isOpen={!!router.query.edition} onRequestClose={() => router.push("/inventory")}>
                     {
                         <div className={styles.infoBox}>

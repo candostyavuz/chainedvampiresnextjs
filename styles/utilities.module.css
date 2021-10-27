@@ -336,8 +336,19 @@
     font-family: 'Cinzel', serif;
     text-align: center;
     color:rgb(114, 95, 95);
-    padding: 3;
 }
+.inventoryemptyh1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    font-family: 'Cinzel', serif;
+    font-size: x-large;
+    text-align: center;
+    color:rgb(230, 223, 223);
+}
+
 .warningBox{
     background: linear-gradient(rgb(34, 4, 4),black);
 }
