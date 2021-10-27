@@ -206,14 +206,16 @@ export default function Inventory() {
 
                     </div>
                 </nav>
+
+                            
+
                 {
                     loaded == 'set' && nfts.length == 0 ?
                         <>
                             <div className={styles.inventoryemptyh1}>Your inventory is empty. <br /> Claim yours on homepage.
-                                <Image className={styles.inventoryemptimg} src="/candle.png" alt="loading" width={150} height={150} objectFit="cover" />
+                                <Image src="/candle.png" alt="loading" width={150} height={150} objectFit="cover" />
                             </div>
                             <Footer />
-
                         </>
                         :
                         <>

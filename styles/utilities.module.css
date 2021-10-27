@@ -23,7 +23,6 @@
     flex-direction:column;
     flex-flow:wrap;
     justify-content: center;
-    margin-top: 5rem;
 }
 
 .inventoryImages2{
@@ -338,11 +337,13 @@
     color:rgb(114, 95, 95);
 }
 .inventoryemptyh1{
+    background-color: rgb(0, 0, 0);
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 80vh;
+    min-height: 85vh;
     font-family: 'Cinzel', serif;
     font-size: x-large;
     text-align: center;
