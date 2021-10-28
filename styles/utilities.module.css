@@ -583,6 +583,24 @@
     min-width: 300px;
 }
 
+.mintOpenDate{
+    font-family:'Cinzel', serif;
+    color: white;
+    font-size: 1.5rem; 
+    text-align: center;
+    position: relative;
+    top: 9rem;
+}
+
+.mintOpenDate2{
+    color: rgb(242, 223, 195);
+    font-size: 4rem;
+    font-family: 'Cinzel', serif;
+    text-align: center;
+    position: relative;
+    top: 9rem;
+}
+
 
 @media (max-width: 900px) {
     .mintitemsimgdiv{

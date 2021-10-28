@@ -340,15 +340,15 @@ export default function Home() {
                   <Image src="/avax.png" alt="avax" width={30} height={30} />
                 </h2>
 
-
               </div>
             }
             </div>
-
+            <h1 className={styles.mintOpenDate}> MINTING IS AVAILABLE ON: </h1>
+                <h1 className={styles.mintOpenDate2}> 11/11/21 </h1>
           </motion.div>
-
+            
         </div>
-
+            
       </section>
 
 
@@ -414,7 +414,7 @@ export default function Home() {
           <div className={styles.aboutcol}>
             <h3>MECHANICS</h3>
             <p className={styles.pclass}>Each vampire has born with an unique DNA, unalterable in anyway.</p>
-            <p className={styles.pclass}>This means that your vampire may turn humans (or apes) into rarest vampires in near future.</p>
+            <p className={styles.pclass}>This means that<span className={styles.pclassWhite}>your vampire may turn humans (or apes) into rarest vampires in near future.</span></p>
             <p className={styles.pclass}>This also means that your vampire may win thoughest encounters in the cold metaverse.</p>
             <p className={styles.pclassWhite}>Rarest vampires also have rarest DNAs! </p>
           </div>
@@ -426,7 +426,7 @@ export default function Home() {
             <p className={styles.pclass}>
               High reflection rates.</p>
             <p className={styles.pclass}>
-              Fair token distribution.<span className={styles.pclassWhite}>No whitelists, no pre-minting!</span></p>
+              Long term vision to be the most respected Vampire legion of the metaverse.</p>
             <p className={styles.pclass}>
               Verified contract code is publicly available and can be viewed through C-Chain Explorer</p>
             <p className={styles.pclassWhite}>Safely pinned on IPFS. <br /> No human can take them away!</p>
