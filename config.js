@@ -1,4 +1,4 @@
-export const nftaddress = "0x74c83dd2E832467938ECc92573391C4a73789fb4";
+export const nftaddress = "0xddCB5d122E5E4b061a2eCf132A5e0b7944b37302";
 // export const nftaddress = "0x3e83B1b9f9b904Be9328D98e303DE05660F298D3"; // dna test
 
 
