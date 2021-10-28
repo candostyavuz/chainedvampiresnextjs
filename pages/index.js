@@ -156,7 +156,7 @@ export default function Home() {
       await transaction.wait();
       console.log("minting is complete!");
     } catch (e) {
-      if(e.data.message.toString().includes("insufficient funds")){
+      if (e.data.message.toString().includes("insufficient funds")) {
         window.alert("Insufficent funds in your wallet! You need: " + mintFee_format.toString() + " AVAX!");
       }
       window.alert(e.data.message.toString());
@@ -370,16 +370,19 @@ export default function Home() {
 
           <div >{metamaskState == 'set' ?
             <button className={styles.vampbutton} onClick={() => mintNFT()}>SUMMON</button> :
-            ""}</div>
-
+            ""}
+          </div>
 
         </div>
 
-        <h1 className={styles.mttext}> 1 AVAX / Vampire </h1>
-        <p className={styles.mttext2}> Summon 5 at once: receive 1 more </p>
+        <h1 className={styles.mttext}> 1 AVAX / Vampire <br />
+          <Image src='/promo.png' alt="promo" width={350} height={120} />
+        </h1>
+        {/* <p className={styles.mttext2}> Summon 5 at once: receive 1 more </p>
         <p className={styles.mttext2}> Summon 10 at once: receive 2 more</p>
         <p className={styles.mttext2}> Summon 15 at once: receive 4 more</p>
-        <p className={styles.mttext2}> Summon 20 at once: receive 6 more</p>
+        <p className={styles.mttext2}> Summon 20 at once: receive 6 more</p> */}
+
 
       </section>
 

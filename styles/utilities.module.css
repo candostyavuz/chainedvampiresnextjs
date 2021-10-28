@@ -607,27 +607,28 @@
     color: white;
     position: relative;
     left: 90%;
-    bottom: 20rem;
+    bottom: 22rem;
     text-align: center;
     font-size: larger;
     font-family: 'Cinzel', serif;
 }
 .mttext2 {
-    color: rgb(192, 68, 68);
+    color: rgb(189, 123, 123);
     position: relative;
     left: 90%;
     bottom: 19rem;
     text-align: center;
-    font-size: medium;
+    font-size: small;
     font-family: 'Cinzel', serif;
 }
+
 
 
 .mtbox {
     position: relative;
     display: flex;
     left: 90%;
-    bottom: 20rem;
+    bottom: 22rem;
     align-items: center;
 }
 
