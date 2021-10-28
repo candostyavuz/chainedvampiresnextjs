@@ -159,6 +159,7 @@ export default function Home() {
       if(e.data.message.toString().includes("insufficient funds")){
         window.alert("Insufficent funds in your wallet! You need: " + mintFee_format.toString() + " AVAX!");
       }
+      window.alert(e.data.message.toString());
     }
 
     const currentTokenId = await contract.getCurrentTokenId();

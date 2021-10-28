@@ -62,17 +62,27 @@ export default function Inventory() {
             let uri = organizeURI(tokenUri);
             try {
                 const meta = await axios.get(uri)
-                let item = {
-                    name: meta.data.name,
-                    edition: meta.data.edition,
-                    image: organizeURI(meta.data.image),
-                    dna: meta.data.attributes[15].value
+                let item;
+                if (meta.data.name.toString().includes("Lord Dracula") || meta.data.name.toString().includes("Draxo")) {
+                    item = {
+                        name: meta.data.name,
+                        edition: meta.data.edition,
+                        image: organizeURI(meta.data.image),
+                        dna: meta.data.attributes[3].value
+                    }
+                } else {
+                    item = {
+                        name: meta.data.name,
+                        edition: meta.data.edition,
+                        image: organizeURI(meta.data.image),
+                        dna: meta.data.attributes[15].value
+                    }
                 }
+
                 return item
             } catch (e) {
                 window.alert("Freshly minted metadata is currently being loaded!");
             }
-
         }))
         setNfts(items);
         setLoaded('set');
@@ -86,10 +96,8 @@ export default function Inventory() {
         // DNA
         let str = stringToArr(foundValue.dna);
         // let str = (foundValue.dna);
-
         setCurrNftDNA(str);
         await getEarnedRewards(_edition);
-
     }
 
     const stringToArr = (str) => {
@@ -206,16 +214,13 @@ export default function Inventory() {
 
                     </div>
                 </nav>
-
-                            
-
                 {
                     loaded == 'set' && nfts.length == 0 ?
                         <>
                             <div className={styles.inventoryemptyh1}>Your inventory is empty. <br /> Claim yours on homepage.
                                 <Image src="/candle.png" alt="loading" width={150} height={150} objectFit="cover" />
                             </div>
-                            <Footer />
+                            {/* <Footer /> */}
                         </>
                         :
                         <>
@@ -240,17 +245,11 @@ export default function Inventory() {
                                 }
                             </div>
 
-                            <div className={styles.warningBox}>
-                                <h3 className={styles.inventoryh1}>We do not use any centralized servers to store NFTs.</h3>
-                                <h4 className={styles.inventoryh1}>So please be patient while your data is being fetched from Decentralized networks.</h4>
-                            </div>
-
-                            <Footer />
 
                         </>
-                        
+
                 }
-                
+
                 <Modal className={styles.inventoryModal} isOpen={!!router.query.edition} onRequestClose={() => router.push("/inventory")}>
                     {
                         <div className={styles.infoBox}>
@@ -267,6 +266,13 @@ export default function Inventory() {
                 </Modal>
 
             </section>
+
+            <div className={styles.warningBox}>
+                <h3 className={styles.inventoryh1}>We do not use any centralized servers to store NFTs.</h3>
+                <h4 className={styles.inventoryh1}>So please be patient while your data is being fetched from Decentralized networks.</h4>
+            </div>
+
+            <Footer />
 
         </>
     )
