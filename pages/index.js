@@ -140,34 +140,41 @@ export default function Home() {
     const signer = provider.getSigner();
     const contract = new ethers.Contract(nftaddress, NFT.abi, signer);
 
-    let price;
-    try {
-      price = await contract.mintPrice();
-    } catch (e) {
-      console.log(e);
-    }
-
-    let mintFee_format = await ethers.utils.formatEther(price);
-    mintFee_format *= mintAmount;
-    let mintFee = await ethers.utils.parseEther(mintFee_format.toString());
-
-    try {
-      const transaction = await contract.summonVampire(mintAmount, { value: mintFee });
-      await transaction.wait();
-      console.log("minting is complete!");
-    } catch (e) {
-      if (e.data.message.toString().includes("insufficient funds")) {
-        window.alert("Insufficent funds in your wallet! You need: " + mintFee_format.toString() + " AVAX!");
-      }
-      window.alert(e.data.message.toString());
-    }
-
     const currentTokenId = await contract.getCurrentTokenId();
+    if (currentTokenId < 7000) {
+      let price;
+      try {
+        price = await contract.mintPrice();
+      } catch (e) {
+        console.log(e);
+      }
+
+      let mintFee_format = await ethers.utils.formatEther(price);
+      mintFee_format *= mintAmount;
+      let mintFee = await ethers.utils.parseEther(mintFee_format.toString());
+
+      try {
+        const transaction = await contract.summonVampire(mintAmount, { value: mintFee });
+        await transaction.wait();
+        console.log("minting is complete!");
+      } catch (e) {
+        if (e.data.message.toString().includes("insufficient funds")) {
+          window.alert("Insufficent funds in your wallet! You need: " + mintFee_format.toString() + " AVAX!");
+        }
+        window.alert(e.data.message.toString());
+      }
+
+    } else {
+      window.alert("All vampires have been minted!");
+      return 0;
+    }
+    // const currentTokenId = await contract.getCurrentTokenId();
     setTokenId(currentTokenId.toString());
     getUserRewards();
     const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
     const account = accounts[0];
     getUserBalance(account);
+
   }
 
   async function claimReward() {
@@ -353,7 +360,7 @@ export default function Home() {
 
 
       <section className={styles.mintitems} id="mint">
-            
+
         <div className={styles.mintitemsimgdiv}>
           <Image className={styles.mintitemsimg} objectFit="contain" src="/giphy.gif" alt="vamp gif" width={450}
             height={450} />
@@ -369,8 +376,8 @@ export default function Home() {
           </div>
 
           <div >{metamaskState == 'set' ?
-            <button disabled className={styles.vampbuttondisabled} onClick={() => mintNFT()}>SUMMON</button>:
-            // <button className={styles.vampbutton} onClick={() => mintNFT()}>SUMMON</button> :
+            // <button disabled className={styles.vampbuttondisabled} onClick={() => mintNFT()}>SUMMON</button> :
+            <button className={styles.vampbutton} onClick={() => mintNFT()}>SUMMON</button> :
             ""}
           </div>
 
