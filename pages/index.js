@@ -239,7 +239,6 @@ export default function Home() {
         <meta httpEquiv='Content-Type' content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
         <meta name="description" content="Chained Vampires NFT collection on Avalanche blockchain. 20% minting fee reflection to all holders, marketplace reflections, bite mechanics and many more. Enter the vampire legion of the metaverse!" />
-        <meta name="keywords" content="chained vampires avalanche blockchain nft reflection" />
       </Head>
 
       <main>
