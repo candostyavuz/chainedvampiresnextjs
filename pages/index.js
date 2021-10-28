@@ -276,7 +276,7 @@ export default function Home() {
                 Rewards :
                 {userRewards}
                 {/* <button className={styles.claimb} onClick={() => { claimReward() }}> */}
-                <button disabled className={styles.claimb} onClick={() => { claimReward() }}>
+                <button disabled className={styles.claimbdis} onClick={() => { claimReward() }}>
                   CLAIM
                 </button>
               </span>
