@@ -220,7 +220,7 @@ export default function Inventory() {
                             <div className={styles.inventoryemptyh1}>Your inventory is empty. <br /> Claim yours on homepage.
                                 <Image src="/candle.png" alt="loading" width={150} height={150} objectFit="cover" />
                             </div>
-                            {/* <Footer /> */}
+                            <Footer />
                         </>
                         :
                         <>

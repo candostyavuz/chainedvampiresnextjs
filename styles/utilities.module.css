@@ -8,7 +8,6 @@
 }
 
 .inventoryclass{
-    height: 100vh;
     width: 100%;
     background:black;
 }
@@ -167,6 +166,14 @@
       line-height: 1.8;
   }
 
+  .pclassWait{
+    color: rgb(242, 223, 195);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    font-family: 'Cinzel', serif;
+    position: relative;
+    text-align: center;
+  }
 
 .pclass5{
     color: rgb(242, 223, 195);
@@ -625,7 +632,7 @@
     color: white;
     position: relative;
     left: 90%;
-    bottom: 22rem;
+    bottom: 26rem;
     text-align: center;
     font-size: larger;
     font-family: 'Cinzel', serif;
@@ -646,7 +653,7 @@
     position: relative;
     display: flex;
     left: 90%;
-    bottom: 22rem;
+    bottom: 26rem;
     align-items: center;
 }
 
@@ -688,6 +695,21 @@
     cursor:pointer;
 }
 
+.vampbuttondisabled {
+    text-decoration: none;
+    font-size: 25px;
+    color:rgb(215, 163, 163);
+    margin: 1.5rem;
+    background-color: rgb(163, 136, 136);
+    text-align: center;
+    box-shadow: 0 0 35px 0 rgb(136, 3, 3);
+    border-radius: 20px;
+    padding: 0.8rem;
+    position: relative;
+    left: 2.5rem;
+    cursor:default;
+}
+
 .vampbutton-a {
     text-decoration: none;
     color: black;
@@ -699,6 +721,19 @@
     background-color: rgb(245, 160, 160);
     transition: 0.5s;
 }
+
+.vampbuttondisabled-a {
+    text-decoration: none;
+    color: black;
+    margin: auto;
+    padding: auto;
+}
+
+.vampbuttondisabled:hover {
+    background-color: rgb(245, 160, 160);
+    transition: 0.5s;
+}
+
 
 .h2pos{
     margin: auto;

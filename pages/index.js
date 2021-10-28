@@ -344,16 +344,16 @@ export default function Home() {
             }
             </div>
             <h1 className={styles.mintOpenDate}> MINTING IS AVAILABLE ON: </h1>
-                <h1 className={styles.mintOpenDate2}> 11/11/21 </h1>
+            <h1 className={styles.mintOpenDate2}> 11/11/21 </h1>
           </motion.div>
-            
+
         </div>
-            
+
       </section>
 
 
       <section className={styles.mintitems} id="mint">
-
+            
         <div className={styles.mintitemsimgdiv}>
           <Image className={styles.mintitemsimg} objectFit="contain" src="/giphy.gif" alt="vamp gif" width={450}
             height={450} />
@@ -369,7 +369,8 @@ export default function Home() {
           </div>
 
           <div >{metamaskState == 'set' ?
-            <button className={styles.vampbutton} onClick={() => mintNFT()}>SUMMON</button> :
+            <button disabled className={styles.vampbuttondisabled} onClick={() => mintNFT()}>SUMMON</button>:
+            // <button className={styles.vampbutton} onClick={() => mintNFT()}>SUMMON</button> :
             ""}
           </div>
 
