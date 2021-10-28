@@ -275,8 +275,8 @@ export default function Home() {
               <span className={styles.claim}>
                 Rewards :
                 {userRewards}
-                <button className={styles.claimb} onClick={() => { claimReward() }}>
-                {/* <button disabled className={styles.claimb} onClick={() => { claimReward() }}> */}
+                {/* <button className={styles.claimb} onClick={() => { claimReward() }}> */}
+                <button disabled className={styles.claimb} onClick={() => { claimReward() }}>
                   CLAIM
                 </button>
               </span>
@@ -377,8 +377,7 @@ export default function Home() {
           </div>
 
           <div >{metamaskState == 'set' ?
-            // <button disabled className={styles.vampbuttondisabled} onClick={() => mintNFT()}>SUMMON</button> :
-            <button className={styles.vampbutton} onClick={() => mintNFT()}>SUMMON</button> :
+            <button disabled className={styles.vampbuttondisabled} onClick={() => mintNFT()}>SUMMON</button> :
             ""}
           </div>
 
