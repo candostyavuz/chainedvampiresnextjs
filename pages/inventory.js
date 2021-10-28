@@ -153,126 +153,129 @@ export default function Inventory() {
         <>
             <Head>
                 <title>Chained Vampires | Inventory</title>
+                <meta httpEquiv='Content-Type' content="text/html; charset=utf-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
-                <meta name="keywords" content="vampires" />
+                <meta name="description" content="Chained Vampires NFT collection on Avalanche blockchain. 20% minting fee reflection to all holders, marketplace reflections, bite mechanics and many more. Enter the vampire legion of the metaverse!" />
+                <meta name="keywords" content="chained vampires avalanche blockchain nft reflection" />
             </Head>
 
-            <section className={styles.inventoryclass}>
-                <nav>
-                    <div className={styles.logosection}>
-                        <Link href="/">
-                            <a>
-                                <Image src="/logo2.png" alt="site logo" width={400} height={200} />
-                            </a>
-                        </Link>
-                    </div>
+            <main>
+                <section className={styles.inventoryclass}>
+                    <nav>
+                        <div className={styles.logosection}>
+                            <Link href="/">
+                                <a>
+                                    <Image src="/logo2.png" alt="site logo" width={400} height={200} />
+                                </a>
+                            </Link>
+                        </div>
 
-                    <div className={styles.navlinks}>
-                        <i className="fas fa-bars"></i>
-                        <ul className={styles.navlinksul}>
-                            <li className={styles.navlinksulli}>
-                                <Link href="/">
-                                    <a className={styles.navlinksullia}>
-                                        Home
-                                    </a>
-                                </Link>
-                            </li>
+                        <div className={styles.navlinks}>
+                            <i className="fas fa-bars"></i>
+                            <ul className={styles.navlinksul}>
+                                <li className={styles.navlinksulli}>
+                                    <Link href="/">
+                                        <a className={styles.navlinksullia}>
+                                            Home
+                                        </a>
+                                    </Link>
+                                </li>
 
-                            <li className={styles.navlinksulli}>
-                                <Link href="/inventory">
-                                    <a className={styles.navlinksullia}>
-                                        Inventory
-                                    </a>
-                                </Link>
-                            </li>
-                            <li className={styles.navlinksulli}>
-                                {/* <Link href="/marketplace" >
+                                <li className={styles.navlinksulli}>
+                                    <Link href="/inventory">
+                                        <a className={styles.navlinksullia}>
+                                            Inventory
+                                        </a>
+                                    </Link>
+                                </li>
+                                <li className={styles.navlinksulli}>
+                                    {/* <Link href="/marketplace" >
                                 <a className={styles.navlinksullia}> */}
-                                <div className={styles.navlinksulliaDisabled}>Marketplace</div>
-                                {/* </a>
+                                    <div className={styles.navlinksulliaDisabled}>Marketplace</div>
+                                    {/* </a>
                                 </Link> */}
-                            </li>
-                        </ul>
-                    </div>
-                    <div className={styles.hamburgerMenu} onClick={() => showBurgerMenu()}>
-                        <Image src="/menuicon.png" alt="menuicon" width={45} height={30} />
+                                </li>
+                            </ul>
+                        </div>
+                        <div className={styles.hamburgerMenu} onClick={() => showBurgerMenu()}>
+                            <Image src="/menuicon.png" alt="menuicon" width={45} height={30} />
+                            {
+                                showburger &&
+                                <div className={styles.dropdownContent}>
+                                    <Link href="/">
+                                        <a className={styles.dropdownContentA}>
+                                            Home
+                                        </a>
+                                    </Link>
+                                    <Link href="/inventory">
+                                        <a className={styles.dropdownContentA}>
+                                            Inventory
+                                        </a>
+                                    </Link>
+                                </div>
+                            }
+
+                        </div>
+                    </nav>
+                    {
+                        loaded == 'set' && nfts.length == 0 ?
+                            <>
+                                <div className={styles.inventoryemptyh1}>Your inventory is empty. <br /> Claim yours on homepage.
+                                    <Image src="/candle.png" alt="loading" width={150} height={150} objectFit="cover" />
+                                </div>
+                            </>
+                            :
+                            <>
+                                <div className={styles.inventoryImages}>
+                                    {
+                                        nfts.map((nft, i) => (
+                                            <div key={i} className={styles.inventoryImages2} >
+                                                <motion.div whileHover={{
+                                                    scale: 1.1,
+                                                    transition: { duration: .5 },
+                                                }}
+                                                    whileTap={{ scale: 1.12 }}>
+                                                    <Link href={`/inventory/?edition=${nft.edition}`} as={`/inventory/${nft.edition}`} key={nft.edition}>
+                                                        <a className={styles.nftLabel} onClick={() => getNFTImg(nft.edition)}>
+                                                            <Image className={styles.nftImages} src={nft.image} alt="loading" width={350} height={350} objectFit="cover" placeholder="blur" blurDataURL={nft.image} />
+                                                            <p className={styles.nftLabel}>{nft.name}</p>
+                                                        </a>
+                                                    </Link>
+                                                </motion.div>
+                                            </div>
+                                        ))
+                                    }
+                                </div>
+
+
+                            </>
+
+                    }
+
+                    <Modal className={styles.inventoryModal} isOpen={!!router.query.edition} onRequestClose={() => router.push("/inventory")}>
                         {
-                            showburger &&
-                            <div className={styles.dropdownContent}>
-                                <Link href="/">
-                                    <a className={styles.dropdownContentA}>
-                                        Home
-                                    </a>
-                                </Link>
-                                <Link href="/inventory">
-                                    <a className={styles.dropdownContentA}>
-                                        Inventory
-                                    </a>
-                                </Link>
+                            <div className={styles.infoBox}>
+                                <Image className={styles.nftImagesModal} src={currNftImg} alt="loading" width={550} height={550} objectFit="cover" quality={100} placeholder="blur" blurDataURL={currNftImg} />
+                                <div className={styles.nftInfoModal}>
+                                    <h2 className={styles.pclassModal}>{currNftName}</h2>
+                                    <p className={styles.pclassModal}>Claimable Rewards: {earnedNftReward} AVAX</p>
+                                    <p className={styles.pclassModal}>Rarity: {currNftRarity} </p>
+                                    <p className={styles.pclassModal}>On Market: No</p>
+                                    <p className={styles.pclassModal}>DNA: {currNftDNA}</p>
+                                </div>
                             </div>
                         }
+                    </Modal>
 
-                    </div>
-                </nav>
-                {
-                    loaded == 'set' && nfts.length == 0 ?
-                        <>
-                            <div className={styles.inventoryemptyh1}>Your inventory is empty. <br /> Claim yours on homepage.
-                                <Image src="/candle.png" alt="loading" width={150} height={150} objectFit="cover" />
-                            </div>
-                        </>
-                        :
-                        <>
-                            <div className={styles.inventoryImages}>
-                                {
-                                    nfts.map((nft, i) => (
-                                        <div key={i} className={styles.inventoryImages2} >
-                                            <motion.div whileHover={{
-                                                scale: 1.1,
-                                                transition: { duration: .5 },
-                                            }}
-                                                whileTap={{ scale: 1.12 }}>
-                                                <Link href={`/inventory/?edition=${nft.edition}`} as={`/inventory/${nft.edition}`} key={nft.edition}>
-                                                    <a className={styles.nftLabel} onClick={() => getNFTImg(nft.edition)}>
-                                                        <Image className={styles.nftImages} src={nft.image} alt="loading" width={350} height={350} objectFit="cover" placeholder="blur" blurDataURL={nft.image} />
-                                                        <p className={styles.nftLabel}>{nft.name}</p>
-                                                    </a>
-                                                </Link>
-                                            </motion.div>
-                                        </div>
-                                    ))
-                                }
-                            </div>
+                </section>
 
+                <div className={styles.warningBox}>
+                    <h3 className={styles.inventoryh1}>We do not use any centralized servers to store NFTs.</h3>
+                    <h4 className={styles.inventoryh1}>So please be patient while your data is being fetched from Decentralized networks.</h4>
+                </div>
 
-                        </>
-
-                }
-
-                <Modal className={styles.inventoryModal} isOpen={!!router.query.edition} onRequestClose={() => router.push("/inventory")}>
-                    {
-                        <div className={styles.infoBox}>
-                            <Image className={styles.nftImagesModal} src={currNftImg} alt="loading" width={550} height={550} objectFit="cover" quality={100} placeholder="blur" blurDataURL={currNftImg} />
-                            <div className={styles.nftInfoModal}>
-                                <h2 className={styles.pclassModal}>{currNftName}</h2>
-                                <p className={styles.pclassModal}>Claimable Rewards: {earnedNftReward} AVAX</p>
-                                <p className={styles.pclassModal}>Rarity: {currNftRarity} </p>
-                                <p className={styles.pclassModal}>On Market: No</p>
-                                <p className={styles.pclassModal}>DNA: {currNftDNA}</p>
-                            </div>
-                        </div>
-                    }
-                </Modal>
-
-            </section>
-
-            <div className={styles.warningBox}>
-                <h3 className={styles.inventoryh1}>We do not use any centralized servers to store NFTs.</h3>
-                <h4 className={styles.inventoryh1}>So please be patient while your data is being fetched from Decentralized networks.</h4>
-            </div>
-
-            <Footer />
-
+                <Footer />
+            </main>
         </>
     )
 }
