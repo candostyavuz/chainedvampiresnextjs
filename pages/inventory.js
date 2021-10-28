@@ -152,7 +152,7 @@ export default function Inventory() {
     return (
         <>
             <Head>
-                <title>Chained Vampires | Home</title>
+                <title>Chained Vampires | Inventory</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
                 <meta name="keywords" content="vampires" />
             </Head>

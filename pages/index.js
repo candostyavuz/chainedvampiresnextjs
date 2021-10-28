@@ -77,14 +77,14 @@ export default function Home() {
     try {
       await ethereum.request({
         method: 'wallet_switchEthereumChain',
-        params: [AVALANCHE_TESTNET_PARAMS],
+        params: [AVALANCHE_MAINNET_PARAMS],
       });
       setMetamaskState('set');
     } catch (switchErr) {
       try {
         await ethereum.request({
           method: 'wallet_addEthereumChain',
-          params: [AVALANCHE_TESTNET_PARAMS],
+          params: [AVALANCHE_MAINNET_PARAMS],
         });
         setMetamaskState('set');
       } catch (addErr) {

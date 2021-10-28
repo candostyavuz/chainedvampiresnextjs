@@ -1,6 +1,4 @@
-export const nftaddress = "0xddCB5d122E5E4b061a2eCf132A5e0b7944b37302";
-// export const nftaddress = "0x3e83B1b9f9b904Be9328D98e303DE05660F298D3"; // dna test
-
+export const nftaddress = "0x3E97E567A8d91eB4e888aEFbadaC1a7dC90Fcdac";
 
 export const AVALANCHE_TESTNET_PARAMS = {
     chainId: '0xA869',
