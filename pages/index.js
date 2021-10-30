@@ -410,7 +410,7 @@ export default function Home() {
                 Reflectionary minting system distributes<span className={styles.pclassWhite}>20%</span>of each minting fee to all existing vampires.
               </p>
               <p className={styles.pclass}>
-                Vampires care a lot about their original minters. Minter gains <span className={styles.pclassWhite}>%5</span>life-time royalty.
+                Vampires care a lot about their original minters. Minter gains<span className={styles.pclassWhite}>%5</span>life-time royalty.
               </p>
               <p className={styles.pclass}>
                 Each sale in the Market Place reflects<span className={styles.pclassWhite}>%4</span>distributed to all owners.
@@ -423,8 +423,8 @@ export default function Home() {
             <div className={styles.aboutcol}>
               <h3>MECHANICS</h3>
               <p className={styles.pclass}>Each vampire has born with an unique DNA, unalterable in anyway.</p>
-              <p className={styles.pclass}>This means that<span className={styles.pclassWhite}>your vampire may turn humans (or apes) into rarest vampires in near future.</span></p>
-              <p className={styles.pclass}>This also means that your vampire may win thoughest encounters in the cold metaverse.</p>
+              <p className={styles.pclass}>This means that your vampire may turn humans (or apes) into rarest vampires in near future.</p>
+              <p className={styles.pclass}>This also means that your vampire may win toughest encounters in the cold metaverse.</p>
               <p className={styles.pclassWhite}>Rarest vampires also have rarest DNAs! </p>
             </div>
 

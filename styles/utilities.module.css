@@ -133,8 +133,9 @@
 
 .pclass {
     color:rgb(235, 178, 178);
-    font-size: 25px;
+    font-size: 1.3rem;
     font-weight: 300;
+    font-family: 'Cinzel', serif;
     line-height: 22px;
     padding: 10px;
     text-align: center;
@@ -205,12 +206,13 @@
   }
 .pclassWhite {
     color: white;
-    font-size: 25px;
+    font-size: large;
     font-weight: 300;
     line-height: 22px;
     padding: 1rem;
     text-align: center;
     line-height: 1.2;
+    font-family: 'Cinzel', serif;
 }
 
 .pclassrace {
