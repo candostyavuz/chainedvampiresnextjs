@@ -6,7 +6,7 @@ const Footer = () => {
 
     return (
         <div className="footer"> 
-            <a href="https://twitter.com/chainedvampires">
+            <a href="https://twitter.com/AvaxVampiresNFT">
                 <Image src="/twitter.png" alt="twitterlogo" width={60} height={60} />
             </a>  
             <a href="https://medium.com/@chainedvampires/chained-vampires-reflectionary-nfts-on-avalanche-blockchain-f7167c37b452">
