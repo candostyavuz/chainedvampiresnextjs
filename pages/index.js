@@ -25,7 +25,7 @@ export default function Home() {
   useEffect(() => {
     checkWeb3();
     addAvalancheNetwork();
-  }, [metamaskState]);
+  }, []);
 
   useEffect(() => {
     getUserInfo();
