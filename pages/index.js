@@ -25,7 +25,7 @@ export default function Home() {
   useEffect(() => {
     checkWeb3();
     addAvalancheNetwork();
-  }, []);
+  });
 
   useEffect(() => {
     getUserInfo();
@@ -71,9 +71,6 @@ export default function Home() {
   }
 
   async function addAvalancheNetwork() {
-    if (typeof web3 === 'undefined') {  // For browsers that has no metamask installed (for example: safari)
-      return;
-    }
     try {
       await ethereum.request({
         method: 'wallet_switchEthereumChain',
@@ -102,9 +99,7 @@ export default function Home() {
   };
 
   async function getUserInfo() {
-    if(metamaskState === "not-set") {
-      return;
-    }
+  
     const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
     const account = accounts[0];
     if (accounts[0] !== undefined) {
@@ -133,10 +128,7 @@ export default function Home() {
   }
 
   async function mintNFT() {
-    if(metamaskState === "not-set") {
-      return;
-    }
-    
+
     const web3Modal = new Web3Modal({
       network: "fuji",
       cacheProvider: true
@@ -216,9 +208,6 @@ export default function Home() {
   }
 
   async function getUserRewards() {
-    if(metamaskState === "not-set") {
-      return;
-    }
 
     const web3Modal = new Web3Modal({
       network: "fuji",
