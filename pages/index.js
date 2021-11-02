@@ -25,7 +25,7 @@ export default function Home() {
   useEffect(() => {
     checkWeb3();
     addAvalancheNetwork();
-  }, []);
+  }, [metamaskState]);
 
   useEffect(() => {
     getUserInfo();
@@ -102,6 +102,9 @@ export default function Home() {
   };
 
   async function getUserInfo() {
+    if(metamaskState === "not-set") {
+      return;
+    }
     const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
     const account = accounts[0];
     if (accounts[0] !== undefined) {
@@ -130,6 +133,10 @@ export default function Home() {
   }
 
   async function mintNFT() {
+    if(metamaskState === "not-set") {
+      return;
+    }
+    
     const web3Modal = new Web3Modal({
       network: "fuji",
       cacheProvider: true
@@ -209,6 +216,10 @@ export default function Home() {
   }
 
   async function getUserRewards() {
+    if(metamaskState === "not-set") {
+      return;
+    }
+
     const web3Modal = new Web3Modal({
       network: "fuji",
       cacheProvider: true
@@ -236,6 +247,7 @@ export default function Home() {
     <>
       <Head>
         <title>Chained Vampires | Home</title>
+        <link rel="shortcut icon" href="/logo.png" sizes="250x250"/>
         <meta httpEquiv='Content-Type' content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
         <meta name="description" content="Chained Vampires NFT collection on Avalanche blockchain. 20% minting fee reflection to all holders, marketplace reflections, bite mechanics and many more. Enter the vampire legion of the metaverse!" />

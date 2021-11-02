@@ -109,6 +109,7 @@
     color:white;
     text-align: center;
     text-decoration: none;
+    font-size: small;
 }
 
 .nftLabel2{
@@ -166,6 +167,8 @@
       font-family: 'Cinzel', serif;
       text-align: center;
       line-height: 1.8;
+      margin-left: 1rem;
+      margin-right: 1rem;
   }
 
   .pclassWait{
