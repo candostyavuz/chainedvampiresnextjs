@@ -1,8 +1,38 @@
-/* @import url("https://fonts.googleapis.com");
-@import url("https://fonts.gstatic.com");
-@import url("https://fonts.googleapis.com/css2?family=Hina+Mincho&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cinzel&display=swap"); */
-
+@font-face {
+    font-family: "Cinzel";
+    src: url("/fonts/Cinzel/Cinzel-Black.ttf");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Cinzel";
+    src: url("/fonts/Cinzel/Cinzel-Bold.ttf");
+    font-style: medium;
+    font-weight: 700;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Cinzel";
+    src: url("/fonts/Cinzel/Cinzel-ExtraBold.ttf");
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Cinzel";
+    src: url("/fonts/Cinzel/Cinzel-SemiBold.ttf");
+    font-style: medium;
+    font-weight: 600;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Cinzel";
+    src: url("/fonts/Cinzel/Cinzel-Regular.ttf");
+    font-style: medium;
+    font-weight: 400;
+    font-display: swap;
+  }
 #__next {
     display: flex;
     flex-direction: column;

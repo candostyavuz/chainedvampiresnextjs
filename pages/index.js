@@ -239,6 +239,42 @@ export default function Home() {
         <meta httpEquiv='Content-Type' content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
         <meta name="description" content="Chained Vampires NFT collection on Avalanche blockchain. 20% minting fee reflection to all holders, marketplace reflections, bite mechanics and many more. Enter the vampire legion of the metaverse!" />
+        <link
+          rel="preload"
+          href="/fonts/Cinzel/Cinzel-Black.ttf"
+          as="font"
+          crossOrigin=""
+        />
+        <link
+          rel="preload"
+          href="/fonts/Cinzel/Cinzel-Bold.ttf"
+          as="font"
+          crossOrigin=""
+        />
+        <link
+          rel="preload"
+          href="/fonts/Cinzel/Cinzel-ExtraBold.ttf"
+          as="font"
+          crossOrigin=""
+        />
+        <link
+          rel="preload"
+          href="/fonts/Cinzel/Cinzel-Medium.ttf"
+          as="font"
+          crossOrigin=""
+        />
+        <link
+          rel="preload"
+          href="/fonts/Cinzel/Cinzel-Regular.ttf"
+          as="font"
+          crossOrigin=""
+        />
+        <link
+          rel="preload"
+          href="/fonts/Cinzel/Cinzel-SemiBold.ttf"
+          as="font"
+          crossOrigin=""
+        />
       </Head>
 
       <main>
@@ -588,6 +624,61 @@ export default function Home() {
           </div>
         </section>
 
+        <section className={styles.team}>
+          <h1 className={styles.racesh1}>
+            Team
+          </h1>
+
+          <div className={styles.teamDiv}>
+            <div className={styles.teamPicsDiv} >
+              <Image className={styles.teamPics} src="/onat.png" alt="candost" width={200} height={200} />
+              <p className={styles.pclass}>Can</p>
+            </div>
+            <p className={styles.teamP}>Can is web3 developer and systems engineer. <br />
+              He builds our tech infrastructure.<br />
+              He is obessed with decentralized web and believes that <br />the future of web3 will be on Avalanche. <br />
+              <Link href="https://twitter.com/metalarm_">
+                <a>
+                  <Image src="/twitter.png" width={30} height={30} alt="twt" />
+                </a>
+              </Link>
+            </p>
+          </div>
+
+          <div className={styles.teamDiv}>
+            <div className={styles.teamPicsDiv} >
+              <Image className={styles.teamPics} src="/ozi2.png" alt="onat" width={200} height={200} />
+              <p className={styles.pclass}>Onat</p>
+            </div>
+            <p className={styles.teamP}>Onat is digital artist and NFT creator.<br />
+              Our vampires came to life within his hands. <br />
+              He is the Picasso of dark fantasy art. <br />
+              <Link href="https://www.instagram.com/onatzeber/">
+                <a>
+                  <Image src="/ig-ico.png" width={30} height={30} alt="ig" />
+                </a>
+              </Link>
+            </p>
+          </div>
+
+          <div className={styles.teamDiv}>
+            <div className={styles.teamPicsDiv} >
+              <Image className={styles.teamPics} src="/cang.png" alt="ozan" width={200} height={200} />
+              <p className={styles.pclass}>Ozan</p>
+            </div>
+            <p className={styles.teamP}>Ozan is a pianist, but better at creating awesome UIs. <br />
+              He also manages community events and makes sure that<br /> everyone is well-fed in this clan. <br />
+              <Link href="https://twitter.com/AkifOzancan">
+                <a>
+                  <Image src="/twitter.png" width={30} height={30} alt="twt" />
+                </a>
+              </Link>
+            </p>
+
+          </div>
+
+
+        </section>
         <Footer />
       </main>
     </>

@@ -791,3 +791,48 @@
     background-position: center;
     text-align: center;
 }
+
+.team{
+    background-image: linear-gradient(rgba(46, 12, 12, 0.678), rgba(0, 0, 0, 0.856)),url(../public/dark-red-texture.jpg);
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.teamDiv {
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.teamPicsDiv {
+    position: relative;
+    margin-left: 1rem;
+    flex: 40%;
+    margin-bottom: 1rem;
+}
+
+.teamPics {
+    border-radius: 50%;
+}
+
+.teamP {
+    flex: 50%; 
+    text-align: start;
+    align-self: center;
+    font-family: 'Cinzel',serif;
+    color: rgb(240, 221, 221);
+    font-size: large;
+    margin-left: 2rem;
+}
+
+.teamPSmall{
+    flex: 50%; 
+    font-family: 'Cinzel',serif;
+    color: rgb(112, 151, 249);
+    font-size: large;
+}
+
+
