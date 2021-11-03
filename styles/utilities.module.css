@@ -584,15 +584,6 @@
     text-align: center;
 }
 
-.faqp1 {
-    position: relative;
-    color: white;
-    padding: 3%;
-    font-size: x-large;
-    font-family: 'Cinzel', serif;
-    text-align: center;
-    margin-left: 4rem;
-}
 .faqp2 {
     flex: 60%; 
     text-align: start;
@@ -831,7 +822,7 @@
     position: relative;
     margin-left: 1rem;
     flex: 40%;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .teamPics {
@@ -845,7 +836,17 @@
     font-family: 'Cinzel',serif;
     color: rgb(240, 221, 221);
     font-size: large;
+}
+
+.faqp1 {
+    flex: 50%; 
+    text-align: start;
+    align-self: center;
+    font-family: 'Cinzel',serif;
+    color: rgb(232, 205, 173);
+    font-size: x-large;
     margin-left: 2rem;
+    margin-bottom: 2rem;
 }
 
 .teamPSmall{

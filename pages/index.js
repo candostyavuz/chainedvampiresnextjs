@@ -629,7 +629,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* <section className={styles.team}>
+        <section className={styles.team}>
           <h1 className={styles.racesh1}>
             FAQ!
           </h1>
@@ -637,51 +637,40 @@ export default function Home() {
           <div className={styles.teamDiv}>
             <div className={styles.teamPicsDiv} >
               <Image className={styles.teamPics} src="/onat.png" alt="candost" width={200} height={200} />
-              <p className={styles.pclass}>Can</p>
             </div>
-            <p className={styles.teamP}>Can is web3 developer and systems engineer. <br />
-              He builds our tech infrastructure.<br />
-              He is obessed with decentralized web and believes that <br />the future of web3 will be on Avalanche. <br />
-              <Link href="https://twitter.com/metalarm_">
-                <a>
-                  <Image src="/twitter.png" width={30} height={30} alt="twt" />
-                </a>
-              </Link>
+            <p className={styles.faqp1}> Where can I see my Vampires?
+              <p className={styles.teamP}> Your NFT will be minted on Avalanche C-Chain.<br />
+                You can see it on any platform that is connected to Avalanche.<br />
+                Such as: Metamask Wallet, C-Chain explorer, <br />
+                NFT marketplaces and Inventory.<br />
+              </p>
             </p>
           </div>
 
           <div className={styles.teamDiv}>
             <div className={styles.teamPicsDiv} >
               <Image className={styles.teamPics} src="/ozi2.png" alt="onat" width={200} height={200} />
-              <p className={styles.pclass}>Onat</p>
             </div>
-            <p className={styles.teamP}>Onat is digital artist and NFT creator.<br />
-              Our vampires came to life within his hands. <br />
-              He is the Picasso of dark fantasy art. <br />
-              <Link href="https://www.instagram.com/onatzeber/">
-                <a>
-                  <Image src="/ig-ico.png" width={30} height={30} alt="ig" />
-                </a>
-              </Link>
+            <p className={styles.faqp1}> How can I claim my rewards?
+              <p className={styles.teamP}> You can claim your rewards anytime from the home page.<br />
+              Reflections will be instantly added to your Rewards balance. <br />
+              Claimed rewards will be transferred into your connected wallet.
+              </p>
             </p>
           </div>
 
           <div className={styles.teamDiv}>
             <div className={styles.teamPicsDiv} >
               <Image className={styles.teamPics} src="/cang.png" alt="ozan" width={200} height={200} />
-              <p className={styles.pclass}>Ozan</p>
             </div>
-            <p className={styles.teamP}>Ozan is a pianist, but better at creating awesome UIs. <br />
-              He also manages community events and makes sure that<br /> everyone is well-fed in this clan. <br />
-              <Link href="https://twitter.com/AkifOzancan">
-                <a>
-                  <Image src="/twitter.png" width={30} height={30} alt="twt" />
-                </a>
-              </Link>
+            <p className={styles.faqp1}> What can I do with my Vampires?
+              <p className={styles.teamP}> You have the full ownership of your Vampires. <br />
+              Gain passive income, generate new vampires (soon), <br />
+              Sell it on marketplace, keep it for act-2... Up to you!
+              </p>
             </p>
-
           </div>
-        </section> */}
+        </section>
 
         {/* <section className={styles.team}>
           <h1 className={styles.racesh1}>
