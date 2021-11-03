@@ -71,6 +71,10 @@ export default function Home() {
   }
 
   async function addAvalancheNetwork() {
+    if (typeof web3 === 'undefined') {
+      console.log("web3 is undefined dog")
+      return;
+    }
     try {
       await ethereum.request({
         method: 'wallet_switchEthereumChain',
