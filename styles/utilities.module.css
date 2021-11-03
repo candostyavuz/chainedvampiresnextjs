@@ -450,7 +450,7 @@
     text-align: center;
     font-size: 1.5rem;
     font-family: 'Cinzel', serif;
-    cursor: default;
+    cursor: pointer;
 }
 .claimb:hover {
     background-position: right center;
@@ -584,7 +584,24 @@
     text-align: center;
 }
 
-
+.faqp1 {
+    position: relative;
+    color: white;
+    padding: 3%;
+    font-size: x-large;
+    font-family: 'Cinzel', serif;
+    text-align: center;
+    margin-left: 4rem;
+}
+.faqp2 {
+    flex: 60%; 
+    text-align: start;
+    align-self: center;
+    font-family: 'Cinzel',serif;
+    color: rgb(240, 221, 221);
+    font-size: large;
+    margin-left: 4rem;
+}
 
 /*+ - buttons */
 .mintitems {
