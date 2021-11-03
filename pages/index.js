@@ -629,7 +629,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className={styles.team}>
+        {/* <section className={styles.team}>
           <h1 className={styles.racesh1}>
             Team
           </h1>
@@ -683,7 +683,7 @@ export default function Home() {
           </div>
 
 
-        </section>
+        </section> */}
         <Footer />
       </main>
     </>
