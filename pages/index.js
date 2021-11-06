@@ -428,10 +428,6 @@ export default function Home() {
           <h1 className={styles.mttext}> 1 AVAX / Vampire <br />
             <Image src='/promo.png' alt="promo" width={350} height={120} />
           </h1>
-          {/* <p className={styles.mttext2}> Summon 5 at once: receive 1 more </p>
-        <p className={styles.mttext2}> Summon 10 at once: receive 2 more</p>
-        <p className={styles.mttext2}> Summon 15 at once: receive 4 more</p>
-        <p className={styles.mttext2}> Summon 20 at once: receive 6 more</p> */}
 
 
         </section>
@@ -667,6 +663,19 @@ export default function Home() {
               <p className={styles.teamP}> You have the full ownership of your Vampires. <br />
               Gain passive income, generate new vampires (soon), <br />
               Sell it on marketplace, keep it for act-2... Up to you!
+              </p>
+            </p>
+          </div>
+
+          <div className={styles.teamDiv}>
+            <div className={styles.teamPicsDiv} >
+              <Image className={styles.teamPics} src="/faq4.png" alt="ozan" width={200} height={200} />
+            </div>
+            <p className={styles.faqp1}> Is it safe?
+              <p className={styles.teamP}> Our verified contract is open to anyone who wish to examine. <br />
+              Contract address: 0x3E97E567A8d91eB4e888aEFbadaC1a7dC90Fcdac <br/>
+              We are not audited yet but most of the code inherited<br/> 
+              from audited libraries.  <br/>
               </p>
             </p>
           </div>
