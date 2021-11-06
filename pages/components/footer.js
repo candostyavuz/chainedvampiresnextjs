@@ -6,7 +6,7 @@ const Footer = () => {
 
     return (
         <div className="footer">
-            <a href="https://discord.gg/YF2H3dky">
+            <a href="https://discord.gg/v5AM7VqRFj">
                 <Image src="/dc.png" alt="dclogo" width={60} height={60} />
             </a>
             <a href="https://twitter.com/AvaxVampiresNFT">
