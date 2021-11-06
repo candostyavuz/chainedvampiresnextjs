@@ -674,7 +674,7 @@ export default function Home() {
             <p className={styles.faqp1}> Is it safe?
               <p className={styles.teamP}> Our verified contract is open to anyone who wish to examine. <br />
               Contract address: 0x3E97E567A8d91eB4e888aEFbadaC1a7dC90Fcdac <br/>
-              We are not audited yet but most of the code inherited.<br/> 
+              We are not audited yet but most of the code inherited <br/> 
               from audited libraries.  <br/>
               </p>
             </p>
