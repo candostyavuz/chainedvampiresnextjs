@@ -679,8 +679,9 @@ export default function Home() {
                   </a> 
                 </Link>
                 <br />
-                We are not audited yet but most of the code inherited from audited libraries.
- <br />
+                We are not audited yet but most of the code inherited from 
+                <br />audited libraries.
+
               </p>
             </p>
           </div>
