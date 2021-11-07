@@ -649,8 +649,8 @@ export default function Home() {
             </div>
             <p className={styles.faqp1}> How can I claim my rewards?
               <p className={styles.teamP}> You can claim your rewards anytime from the home page.<br />
-              Reflections will be instantly added to your Rewards balance. <br />
-              Claimed rewards will be transferred into your connected wallet.
+                Reflections will be instantly added to your Rewards balance. <br />
+                Claimed rewards will be transferred into your connected wallet.
               </p>
             </p>
           </div>
@@ -661,24 +661,30 @@ export default function Home() {
             </div>
             <p className={styles.faqp1}> What can I do with my Vampires?
               <p className={styles.teamP}> You have the full ownership of your Vampires. <br />
-              Gain passive income, generate new vampires (soon), <br />
-              Sell it on marketplace, keep it for act-2... Up to you!
+                Gain passive income, generate new vampires (soon), <br />
+                Sell it on marketplace, keep it for act-2... Up to you!
               </p>
             </p>
           </div>
 
           <div className={styles.teamDiv}>
             <div className={styles.teamPicsDiv} >
-              <Image className={styles.teamPics} src="/faq4.png" alt="ozan" width={200} height={200} />
+              <Image className={styles.teamPics} src="/faq4.png" alt="faq4" width={200} height={200} />
             </div>
             <p className={styles.faqp1}> Is it safe?
-              <p className={styles.teamP}> Our verified contract is open to anyone who wish to examine. <br />
-              Contract address: 0x3E97E567A8d91eB4e888aEFbadaC1a7dC90Fcdac <br/>
-              We are not audited yet but most of the code inherited <br/> 
-              from audited libraries.  <br/>
+              <p className={styles.teamP}>
+                <Link href="https://cchain.explorer.avax.network/address/0x3E97E567A8d91eB4e888aEFbadaC1a7dC90Fcdac/contracts">
+                  <a className={styles.teamP}>
+                    Check our verified contract here!
+                  </a> 
+                </Link>
+                <br />
+                We are not audited yet but most of the code inherited from audited libraries.
+ <br />
               </p>
             </p>
           </div>
+
         </section>
 
         {/* <section className={styles.team}>
