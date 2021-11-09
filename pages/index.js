@@ -24,26 +24,26 @@ export default function Home() {
 
   useEffect(() => {
     checkWeb3();
-    addAvalancheNetwork();
+    // addAvalancheNetwork();
   });
 
   useEffect(() => {
-    getUserInfo();
+    if (metamaskState === "set") {
+      getUserInfo();
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   });
 
   useEffect(() => {
-    console.log(metamaskState);
-  }, [metamaskState]);
-
-  useEffect(() => {
-    getCurrentTokenId();
-  }, [tokenId]);
+    if (metamaskState === "set") {
+      getCurrentTokenId();
+    }
+  });
 
   useEffect(() => {
     getUserRewards();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  });
 
   useEffect(() => {
     setMintAmount(1);
@@ -59,11 +59,26 @@ export default function Home() {
     // Check if Web3 has been injected by the browser (Mist/MetaMask).
     if (typeof web3 !== 'undefined') {
       console.log("metamask found");
+      const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+      const chainId = await ethereum.request({ method: 'eth_chainId' });
+      if(chainId.toString() === "0xa86a" && accounts[0] !== undefined) {
+        setMetamaskState('set');
+      } else {
+        setMetamaskState('not-set');
+      }
+      console.log(chainId);
     } else {
       setMetamaskState('not-set');
       console.log("metamask not found");
       window.alert("Please install Metamask Wallet to use this site.");
     }
+
+    const provider = new ethers.providers.Web3Provider(window.ethereum, "any");
+    provider.on("network", (newNetwork, oldNetwork) => {
+      if (oldNetwork) {
+        window.location.reload();
+      }
+    });
   }
 
   function updateMintAmount(event) {
@@ -72,10 +87,10 @@ export default function Home() {
 
   async function addAvalancheNetwork() {
     if (typeof web3 === 'undefined') {
-      console.log("web3 is undefined dog")
       return;
     }
     try {
+      // Request account access if needed
       await ethereum.request({
         method: 'wallet_switchEthereumChain',
         params: [AVALANCHE_MAINNET_PARAMS],
@@ -91,16 +106,21 @@ export default function Home() {
       } catch (addErr) {
         setMetamaskState('not-set');
         window.alert("Metamask is already waiting for your approval to switch Avalanche. Please check your Metamask extension in the browser.");
-        console.log(addErr)
+        console.log(addErr);
       }
     }
-    const provider = new ethers.providers.Web3Provider(window.ethereum, "any");
-    provider.on("network", (newNetwork, oldNetwork) => {
-      if (oldNetwork) {
-        window.location.reload();
-      }
-    });
+    window.location.reload();
+
+    // window.alert("Metamask is already waiting for your approval to switch Avalanche. Please check your Metamask extension in the browser.");
+
+    // const provider = new ethers.providers.Web3Provider(window.ethereum, "any");
+    // provider.on("network", (newNetwork, oldNetwork) => {
+    //   if (oldNetwork) {
+    //     window.location.reload();
+    //   }
+    // });
   };
+
 
   async function getUserInfo() {
 
