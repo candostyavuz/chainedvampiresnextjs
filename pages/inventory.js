@@ -234,7 +234,7 @@ export default function Inventory() {
                                                     transition: { duration: .5 },
                                                 }}
                                                     whileTap={{ scale: 1.12 }}>
-                                                    <Link href={`/inventory/?edition=${nft.edition}`} as={`/inventory/${nft.edition}`} key={nft.edition}>
+                                                    <Link href={`/inventory/?edition=${nft.edition}`} as={`/inventory/`} key={nft.edition}>
                                                         <a className={styles.nftLabel} onClick={() => getNFTImg(nft.edition)}>
                                                             <Image className={styles.nftImages} src={nft.image} alt="loading" width={350} height={350} objectFit="cover" placeholder="blur" blurDataURL={nft.image} />
                                                             <p className={styles.nftLabel}>{nft.name}</p>
@@ -262,6 +262,11 @@ export default function Inventory() {
                                     <p className={styles.pclassModal}>On Market: No</p>
                                     <p className={styles.pclassModal}>DNA: {currNftDNA}</p>
                                 </div>
+                                <Link href={currNftImg}>
+                                    <a>
+                                        <Image className={styles.nftImagesModal} src={"/dwnld.png"} alt="loading" width={50} height={50}/>
+                                    </a>
+                                </Link>
                             </div>
                         }
                     </Modal>
