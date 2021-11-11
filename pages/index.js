@@ -413,8 +413,8 @@ export default function Home() {
                 </div>
               }
               </div>
-              <h1 className={styles.mintOpenDate}> MINTING IS AVAILABLE ON: </h1>
-              <h1 className={styles.mintOpenDate2}> 11/11/21 </h1>
+              <h1 className={styles.mintOpenDate}> MINTING IS ON! </h1>
+              {/* <h1 className={styles.mintOpenDate2}> 11/11/21 </h1> */}
             </motion.div>
 
           </div>
