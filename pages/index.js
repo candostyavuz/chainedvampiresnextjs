@@ -430,7 +430,11 @@ export default function Home() {
           </div>
 
           <div className={styles.mttext}>
-            <h1> {tokenId} / 7000 <br /> VAMPIRES MINTED</h1>
+            { metamaskState == 'set' ? 
+             <h1> {tokenId} / 7000 <br /> VAMPIRES MINTED</h1>:
+             <h1>Connect your wallet!</h1>
+            }
+           
           </div>
 
           <div className={styles.mtbox}>
@@ -440,7 +444,8 @@ export default function Home() {
 
             <div >{metamaskState == 'set' ?
               <button className={styles.vampbutton} onClick={() => mintNFT()}>SUMMON</button> :
-              ""}
+              <button disabled className={styles.vampbuttondisabled} onClick={() => mintNFT()}>SUMMON</button>
+              }
             </div>
 
           </div>
