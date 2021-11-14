@@ -413,8 +413,13 @@ export default function Home() {
                 </div>
               }
               </div>
-              <h1 className={styles.mintOpenDate}> MINTING IS ON! </h1>
-              {/* <h1 className={styles.mintOpenDate2}> 11/11/21 </h1> */}
+              {
+                tokenId <= 800 ?
+                <h1 className={styles.mintOpenDate}> MINTING IS ON! </h1> :
+                <h1 className={styles.mintOpenDate}> EARLY MINTING STAGE IS OVER! </h1>
+              }
+              
+              {/* <h1 className={styles.mintOpenDate2}> 800 </h1> */}
             </motion.div>
 
           </div>
@@ -442,7 +447,7 @@ export default function Home() {
               <input onKeyDown={(e) => { e.preventDefault() }} id="mintBar" className={styles.inputclass} type="number" min="1" max="20" value={mintAmount} onChange={(event) => updateMintAmount(event)} />
             </div>
 
-            <div >{metamaskState == 'set' ?
+            <div >{metamaskState == 'set' && tokenId <= 800 ?
               <button className={styles.vampbutton} onClick={() => mintNFT()}>SUMMON</button> :
               <button disabled className={styles.vampbuttondisabled} onClick={() => mintNFT()}>SUMMON</button>
               }
