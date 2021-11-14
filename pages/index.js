@@ -415,7 +415,17 @@ export default function Home() {
               </div>
               {
                 tokenId <= 800 ?
-                <h1 className={styles.mintOpenDate}> MINTING IS ON! </h1> :
+                <>
+                <h1 className={styles.mintOpenDate}> MINTING IS ON! </h1> 
+                
+                <Link href="https://twitter.com/AvaxVampiresNFT/status/1459927964850823186">
+                    <a className={styles.mintOpenDateEarly}>
+                    EARLY ADOPTERS MINTING WILL BE CLOSED AFTER 800TH MINT. 
+                    </a>
+                  </Link>
+                {/* <p className={styles.mintOpenDateEarly}> EARLY ADOPTERS MINTING WILL BE CLOSED AFTER 800TH MINT. </p>  */}
+                </>:
+                
                 <h1 className={styles.mintOpenDate}> EARLY MINTING STAGE IS OVER! </h1>
               }
               

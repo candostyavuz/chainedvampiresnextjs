@@ -631,6 +631,15 @@
     top: 9rem;
 }
 
+.mintOpenDateEarly{
+    font-family:'Cinzel', serif;
+    color: rgb(242, 223, 195);
+    font-size: 1.2rem; 
+    text-align: center;
+    position: relative;
+    top: 9rem;
+}
+
 .mintOpenDate2{
     color: rgb(242, 223, 195);
     font-size: 4rem;
