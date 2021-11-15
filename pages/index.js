@@ -20,43 +20,47 @@ export default function Home() {
   const [userRewards, setUserRewards] = useState("0");
   const [mintAmount, setMintAmount] = useState(1);
   const [showburger, setShowBurger] = useState(false);
-  //
-  // const [days, setDays] = useState(0);
-  // const [minutes, setMinutes] = useState(0);
-  // const [hours, setHours] = useState(0);
-  // const [seconds, setSeconds] = useState(0);
-  // const [launchTime, setLaunchTime] = useState(false);
-  // setLoadingState(
 
-  // useEffect(() => {
+  const [days, setDays] = useState(0);
+  const [minutes, setMinutes] = useState(0);
+  const [hours, setHours] = useState(0);
+  const [seconds, setSeconds] = useState(0);
+  const [launchTime, setLaunchTime] = useState(false);
 
-  //   const target = new Date("12/02/2021 21:00:00");
-
-  //   const interval = setInterval(() => {
-  //     const now = new Date();
-  //     const difference = target.getTime() - now.getTime();
-  //     const d = Math.floor(difference / (1000 * 60 * 60 * 24));
-  //     const h = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  //     const m = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-  //     const s = Math.floor((difference % (1000 * 60)) / 1000);
-  //     setDays(d);
-  //     setHours(h);
-  //     setMinutes(m);
-  //     setSeconds(s);
-
-  //     if (d <= 0 && h <= 0 && m <= 0 && s <= 0) {
-  //       setLaunchTime(true);
-  //     }
-
-  //   }, 1000)
-
-  //   return () => clearInterval(interval);
-  // }, [])
 
   useEffect(() => {
     checkWeb3();
     // addAvalancheNetwork();
   });
+
+  useEffect(() => {
+    if (metamaskState === "set") {
+      const target = new Date("12/02/2021 21:00:00");
+
+      const interval = setInterval(() => {
+        const now = new Date();
+        const difference = target.getTime() - now.getTime();
+        const d = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const h = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const m = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+        const s = Math.floor((difference % (1000 * 60)) / 1000);
+        setDays(d);
+        setHours(h);
+        setMinutes(m);
+        setSeconds(s);
+
+        if (d <= 0 && h <= 0 && m <= 0 && s <= 0) {
+          setLaunchTime(true);
+          clearInterval(interval);
+        }
+
+      }, 1000)
+
+      return () => clearInterval(interval);
+    }
+
+  });
+
 
   useEffect(() => {
     if (metamaskState === "set") {
@@ -92,7 +96,7 @@ export default function Home() {
       console.log("metamask found");
       const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
       const chainId = await ethereum.request({ method: 'eth_chainId' });
-      if(chainId.toString() === "0xa86a" && accounts[0] !== undefined) {
+      if (chainId.toString() === "0xa86a" && accounts[0] !== undefined) {
         setMetamaskState('set');
       } else {
         setMetamaskState('not-set');
@@ -449,8 +453,12 @@ export default function Home() {
 
               <h1 className={styles.mintOpenDate}> EARLY MINTING STAGE IS OVER! </h1>
               <h1 className={styles.mintOpenDate}> PUBLIC LAUNCH IS ON: </h1>
-              {/* <h1 className={styles.mintOpenDate2}> {zeroPad(days,2)} : {zeroPad(hours,2)} : {zeroPad(minutes,2)} : {zeroPad(seconds,2)} </h1> */}
-              <h1 className={styles.mintOpenDate2}> DECEMBER 2 </h1>
+              {
+                metamaskState === "set" ?
+                <h1 className={styles.mintOpenDate2}> {zeroPad(days, 2)} : {zeroPad(hours, 2)} : {zeroPad(minutes, 2)} : {zeroPad(seconds, 2)} </h1>:
+                <h1 className={styles.mintOpenDate2}> DECEMBER 2 </h1>
+              }
+            
             </motion.div>
 
           </div>
@@ -466,8 +474,8 @@ export default function Home() {
           </div>
 
           <div className={styles.mttext}>
-            { metamaskState == 'set' ?
-              <h1> {tokenId} / 7000 <br /> VAMPIRES MINTED</h1>:
+            {metamaskState == 'set' ?
+              <h1> {tokenId} / 7000 <br /> VAMPIRES MINTED</h1> :
               <h1>Connect your wallet!</h1>
             }
 
@@ -529,7 +537,7 @@ export default function Home() {
             <div className={styles.aboutcol}>
               <h3>WHY ?</h3>
               <p className={styles.pclass}>
-                Low minting fee:<span className={styles.pclassWhite}>1 AVAX</span></p>
+                Low minting fee:<span className={styles.pclassWhite}>1,5 AVAX</span></p>
               <p className={styles.pclass}>
                 High reflection rates.</p>
               <p className={styles.pclass}>
