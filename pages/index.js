@@ -21,37 +21,37 @@ export default function Home() {
   const [mintAmount, setMintAmount] = useState(1);
   const [showburger, setShowBurger] = useState(false);
   //
-  const [days, setDays] = useState(0);
-  const [minutes, setMinutes] = useState(0);
-  const [hours, setHours] = useState(0);
-  const [seconds, setSeconds] = useState(0);
-  const [launchTime, setLaunchTime] = useState(false);
+  // const [days, setDays] = useState(0);
+  // const [minutes, setMinutes] = useState(0);
+  // const [hours, setHours] = useState(0);
+  // const [seconds, setSeconds] = useState(0);
+  // const [launchTime, setLaunchTime] = useState(false);
   // setLoadingState(
 
-  useEffect(() => {
+  // useEffect(() => {
 
-    const target = new Date("12/02/2021 21:00:00");
+  //   const target = new Date("12/02/2021 21:00:00");
 
-    const interval = setInterval(() => {
-      const now = new Date();
-      const difference = target.getTime() - now.getTime();
-      const d = Math.floor(difference / (1000 * 60 * 60 * 24));
-      const h = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const m = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-      const s = Math.floor((difference % (1000 * 60)) / 1000);
-      setDays(d);
-      setHours(h);
-      setMinutes(m);
-      setSeconds(s);
+  //   const interval = setInterval(() => {
+  //     const now = new Date();
+  //     const difference = target.getTime() - now.getTime();
+  //     const d = Math.floor(difference / (1000 * 60 * 60 * 24));
+  //     const h = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  //     const m = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+  //     const s = Math.floor((difference % (1000 * 60)) / 1000);
+  //     setDays(d);
+  //     setHours(h);
+  //     setMinutes(m);
+  //     setSeconds(s);
 
-      if (d <= 0 && h <= 0 && m <= 0 && s <= 0) {
-        setLaunchTime(true);
-      }
+  //     if (d <= 0 && h <= 0 && m <= 0 && s <= 0) {
+  //       setLaunchTime(true);
+  //     }
 
-    }, 1000)
+  //   }, 1000)
 
-    return () => clearInterval(interval);
-  }, [])
+  //   return () => clearInterval(interval);
+  // }, [])
 
   useEffect(() => {
     checkWeb3();
@@ -449,8 +449,8 @@ export default function Home() {
 
               <h1 className={styles.mintOpenDate}> EARLY MINTING STAGE IS OVER! </h1>
               <h1 className={styles.mintOpenDate}> PUBLIC LAUNCH IS ON: </h1>
-              <h1 className={styles.mintOpenDate2}> {zeroPad(days,2)} : {zeroPad(hours,2)} : {zeroPad(minutes,2)} : {zeroPad(seconds,2)} </h1>
-              {/* <h1 className={styles.mintOpenDate2}> DECEMBER 2 </h1> */}
+              {/* <h1 className={styles.mintOpenDate2}> {zeroPad(days,2)} : {zeroPad(hours,2)} : {zeroPad(minutes,2)} : {zeroPad(seconds,2)} </h1> */}
+              <h1 className={styles.mintOpenDate2}> DECEMBER 2 </h1>
             </motion.div>
 
           </div>
