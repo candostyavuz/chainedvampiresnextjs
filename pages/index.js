@@ -452,7 +452,7 @@ export default function Home() {
 
           </div>
 
-          <h1 className={styles.mttext}> 1 AVAX / Vampire <br />
+          <h1 className={styles.mttext}> 1,5 AVAX / Vampire <br />
             <Image src='/promo.png' alt="promo" width={350} height={120} />
           </h1>
 
