@@ -338,7 +338,7 @@ export default function Home() {
                   Rewards :
                   {userRewards}
                   <button className={styles.claimb} onClick={() => { claimReward() }}>
-                  {/* <button disabled className={styles.claimbdis} onClick={() => { claimReward() }}> */}
+                    {/* <button disabled className={styles.claimbdis} onClick={() => { claimReward() }}> */}
                     CLAIM
                   </button>
                 </span>
@@ -413,23 +413,10 @@ export default function Home() {
                 </div>
               }
               </div>
-              {
-                tokenId <= 800 ?
-                <>
-                <h1 className={styles.mintOpenDate}> MINTING IS ON! </h1> 
-                
-                <Link href="https://twitter.com/AvaxVampiresNFT/status/1459927964850823186">
-                    <a className={styles.mintOpenDateEarly}>
-                    EARLY ADOPTERS MINTING WILL BE CLOSED AFTER 800TH MINT. 
-                    </a>
-                  </Link>
-                {/* <p className={styles.mintOpenDateEarly}> EARLY ADOPTERS MINTING WILL BE CLOSED AFTER 800TH MINT. </p>  */}
-                </>:
-                
-                <h1 className={styles.mintOpenDate}> EARLY MINTING STAGE IS OVER! </h1>
-              }
-              
-              {/* <h1 className={styles.mintOpenDate2}> 800 </h1> */}
+
+              <h1 className={styles.mintOpenDate}> EARLY MINTING STAGE IS OVER! </h1>
+              <h1 className={styles.mintOpenDate}> PUBLIC LAUNCH IS ON: </h1>
+              <h1 className={styles.mintOpenDate2}> DECEMBER 2 </h1>
             </motion.div>
 
           </div>
@@ -445,11 +432,11 @@ export default function Home() {
           </div>
 
           <div className={styles.mttext}>
-            { metamaskState == 'set' ? 
-             <h1> {tokenId} / 7000 <br /> VAMPIRES MINTED</h1>:
-             <h1>Connect your wallet!</h1>
+            { metamaskState == 'set' ?
+              <h1> {tokenId} / 7000 <br /> VAMPIRES MINTED</h1>:
+              <h1>Connect your wallet!</h1>
             }
-           
+
           </div>
 
           <div className={styles.mtbox}>
@@ -460,7 +447,7 @@ export default function Home() {
             <div >{metamaskState == 'set' && tokenId <= 800 ?
               <button className={styles.vampbutton} onClick={() => mintNFT()}>SUMMON</button> :
               <button disabled className={styles.vampbuttondisabled} onClick={() => mintNFT()}>SUMMON</button>
-              }
+            }
             </div>
 
           </div>
@@ -716,10 +703,10 @@ export default function Home() {
                 <Link href="https://cchain.explorer.avax.network/address/0x3E97E567A8d91eB4e888aEFbadaC1a7dC90Fcdac/contracts">
                   <a className={styles.teamP}>
                     Check our verified contract here!
-                  </a> 
+                  </a>
                 </Link>
                 <br />
-                We are not audited yet but most of the code inherited from 
+                We are not audited yet but most of the code inherited from
                 <br />audited libraries.
 
               </p>
