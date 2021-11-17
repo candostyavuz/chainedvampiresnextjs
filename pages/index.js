@@ -810,7 +810,17 @@ export default function Home() {
               <p className={styles.pclass}>Ozan</p>
             </div>
             <p className={styles.teamP2}>Ozan is a pianist, but better at creating awesome UIs. <br />
-              He designed most of the visuals on the WebSite and coded the styles.
+              He designed most of the visuals on the WebSite and coded the styles.<br />
+              <Link href="https://twitter.com/AkifOzancan">
+                <a>
+                  <Image src="/twitter.png" width={30} height={30} alt="twt" />
+                </a>
+              </Link>
+              <Link href="https://www.instagram.com/akif_ozan_yavuz/">
+                <a>
+                  <Image src="/ig-ico.png" width={30} height={30} alt="ig" />
+                </a>
+              </Link>
             </p>
           </div>
 
