@@ -494,7 +494,7 @@ export default function Home() {
 
           </div>
 
-          <h1 className={styles.mttext}> 1,5 AVAX / Vampire <br />
+          <h1 className={styles.mttext}> 1.5 AVAX / Vampire <br />
             <Image src='/promo.png' alt="promo" width={350} height={120} />
           </h1>
 
@@ -537,7 +537,7 @@ export default function Home() {
             <div className={styles.aboutcol}>
               <h3>WHY ?</h3>
               <p className={styles.pclass}>
-                Low minting fee:<span className={styles.pclassWhite}>1,5 AVAX</span></p>
+                Low minting fee:<span className={styles.pclassWhite}>1.5 AVAX</span></p>
               <p className={styles.pclass}>
                 High reflection rates.</p>
               <p className={styles.pclass}>
