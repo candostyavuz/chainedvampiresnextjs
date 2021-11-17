@@ -455,10 +455,10 @@ export default function Home() {
               <h1 className={styles.mintOpenDate}> PUBLIC LAUNCH IS ON: </h1>
               {
                 metamaskState === "set" ?
-                <h1 className={styles.mintOpenDate2}> {zeroPad(days, 2)} : {zeroPad(hours, 2)} : {zeroPad(minutes, 2)} : {zeroPad(seconds, 2)} </h1>:
-                <h1 className={styles.mintOpenDate2}> DECEMBER 2 </h1>
+                  <h1 className={styles.mintOpenDate2}> {zeroPad(days, 2)} : {zeroPad(hours, 2)} : {zeroPad(minutes, 2)} : {zeroPad(seconds, 2)} </h1> :
+                  <h1 className={styles.mintOpenDate2}> DECEMBER 2 </h1>
               }
-            
+
             </motion.div>
 
           </div>
@@ -694,7 +694,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className={styles.team}>
+        <section className={styles.faq}>
           <h1 className={styles.racesh1}>
             FAQ!
           </h1>
@@ -757,22 +757,32 @@ export default function Home() {
 
         </section>
 
-        {/* <section className={styles.team}>
+        <section className={styles.team}>
           <h1 className={styles.racesh1}>
             Team
           </h1>
 
           <div className={styles.teamDiv}>
             <div className={styles.teamPicsDiv} >
-              <Image className={styles.teamPics} src="/onat.png" alt="candost" width={200} height={200} />
+              <Image className={styles.teamPics} src="/can.png" alt="candost" width={200} height={200} />
               <p className={styles.pclass}>Can</p>
             </div>
-            <p className={styles.teamP}>Can is web3 developer and systems engineer. <br />
+            <p className={styles.teamP2}>Can is ChainShot certified web3 developer and systems engineer. <br />
               He builds our tech infrastructure.<br />
-              He is obessed with decentralized web and believes that <br />the future of web3 will be on Avalanche. <br />
-              <Link href="https://twitter.com/metalarm_">
+              He is obessed with decentralized web and believes that <br />the future of web3 will be on Avalanche Network. <br />
+              <Link href="https://twitter.com/candosty_">
                 <a>
                   <Image src="/twitter.png" width={30} height={30} alt="twt" />
+                </a>
+              </Link>
+              <Link href="https://www.linkedin.com/in/candosty/">
+                <a>
+                  <Image src="/linkedin.png" width={35} height={35} alt="linkedin" />
+                </a>
+              </Link>
+              <Link href="https://www.chainshot.com/certificates/cdos91621">
+                <a>
+                  <Image src="/chainshot.png" width={30} height={30} alt="chainshot" />
                 </a>
               </Link>
             </p>
@@ -780,10 +790,10 @@ export default function Home() {
 
           <div className={styles.teamDiv}>
             <div className={styles.teamPicsDiv} >
-              <Image className={styles.teamPics} src="/ozi2.png" alt="onat" width={200} height={200} />
+              <Image className={styles.teamPics} src="/onatteam.png" alt="onat" width={200} height={200} />
               <p className={styles.pclass}>Onat</p>
             </div>
-            <p className={styles.teamP}>Onat is digital artist and NFT creator.<br />
+            <p className={styles.teamP2}>Onat is digital artist and NFT creator.<br />
               Our vampires came to life within his hands. <br />
               He is the Picasso of dark fantasy art. <br />
               <Link href="https://www.instagram.com/onatzeber/">
@@ -796,20 +806,15 @@ export default function Home() {
 
           <div className={styles.teamDiv}>
             <div className={styles.teamPicsDiv} >
-              <Image className={styles.teamPics} src="/cang.png" alt="ozan" width={200} height={200} />
+              <Image className={styles.teamPics} src="/ozanteam.png" alt="ozan" width={200} height={200} />
               <p className={styles.pclass}>Ozan</p>
             </div>
-            <p className={styles.teamP}>Ozan is a pianist, but better at creating awesome UIs. <br />
-              He also manages community events and makes sure that<br /> everyone is well-fed in this clan. <br />
-              <Link href="https://twitter.com/AkifOzancan">
-                <a>
-                  <Image src="/twitter.png" width={30} height={30} alt="twt" />
-                </a>
-              </Link>
+            <p className={styles.teamP2}>Ozan is a pianist, but better at creating awesome UIs. <br />
+              He designed most of the visuals on the WebSite and coded the styles.
             </p>
-
           </div>
-        </section> */}
+
+        </section>
 
         <Footer />
       </main>

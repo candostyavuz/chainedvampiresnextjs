@@ -812,8 +812,16 @@
     text-align: center;
 }
 
-.team{
+.faq{
     background-image: linear-gradient(rgba(46, 12, 12, 0.678), rgba(0, 0, 0, 0.856)),url(../public/dark-red-texture.jpg);
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.team{
+    background-image: linear-gradient(rgba(5, 9, 29, 0.678), rgba(0, 0, 0, 0.856)),url(../public/familytexture.jpg);
     text-align: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -845,6 +853,17 @@
     font-family: 'Cinzel',serif;
     color: rgb(240, 221, 221);
     font-size: large;
+}
+
+.teamP2 {
+    flex: 50%; 
+    text-align: start;
+    align-self: center;
+    font-family: 'Cinzel',serif;
+    color: rgb(240, 221, 221);
+    font-size: large;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
 }
 
 .faqp1 {
