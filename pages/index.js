@@ -740,7 +740,7 @@ export default function Home() {
             <div className={styles.teamPicsDiv} >
               <Image className={styles.teamPics} src="/faq4.png" alt="faq4" width={200} height={200} />
             </div>
-            <p className={styles.faqp1}> Is it safe?
+            <p className={styles.faqp1}> Where can I see the contract?
               <p className={styles.teamP}>
                 <Link href="https://cchain.explorer.avax.network/address/0x3E97E567A8d91eB4e888aEFbadaC1a7dC90Fcdac/contracts">
                   <a className={styles.teamP}>
