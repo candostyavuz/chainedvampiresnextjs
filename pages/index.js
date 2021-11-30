@@ -456,7 +456,7 @@ export default function Home() {
               {
                 metamaskState === "set" ?
                   <h1 className={styles.mintOpenDate2}> {zeroPad(days, 2)} : {zeroPad(hours, 2)} : {zeroPad(minutes, 2)} : {zeroPad(seconds, 2)} </h1> :
-                  <h1 className={styles.mintOpenDate2}> DECEMBER 2 </h1>
+                  <h1 className={styles.mintOpenDate2}> DECEMBER 2 - 6 pm UTC</h1>
               }
 
             </motion.div>
