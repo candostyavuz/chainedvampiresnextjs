@@ -451,7 +451,6 @@ export default function Home() {
               }
               </div>
 
-              <h1 className={styles.mintOpenDate}> EARLY MINTING STAGE IS OVER! </h1>
               <h1 className={styles.mintOpenDate}> PUBLIC LAUNCH IS ON: </h1>
               {
                 metamaskState === "set" ?
