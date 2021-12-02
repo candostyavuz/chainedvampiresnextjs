@@ -451,8 +451,8 @@ export default function Home() {
               }
               </div>
 
-              <h1 className={styles.mintOpenDate}> PUBLIC LAUNCH IS ON: </h1>
-              <h1 className={styles.mintOpenDate2}> DECEMBER 2 - 6 pm UTC</h1>
+              <h1 className={styles.mintOpenDate}> MINTING IS ACTIVE! </h1>
+              <h1 className={styles.mintOpenDate2}> CLAIM YOUR VAMPIRE</h1>
               {/* {
                 metamaskState === "set" ?
                   <h1 className={styles.mintOpenDate2}> {zeroPad(days, 2)} : {zeroPad(hours, 2)} : {zeroPad(minutes, 2)} : {zeroPad(seconds, 2)} </h1> :
@@ -486,7 +486,7 @@ export default function Home() {
               <input onKeyDown={(e) => { e.preventDefault() }} id="mintBar" className={styles.inputclass} type="number" min="1" max="20" value={mintAmount} onChange={(event) => updateMintAmount(event)} />
             </div>
 
-            <div >{metamaskState == 'set' && tokenId <= 800 ?
+            <div >{metamaskState == 'set' ?
               <button className={styles.vampbutton} onClick={() => mintNFT()}>SUMMON</button> :
               <button disabled className={styles.vampbuttondisabled} onClick={() => mintNFT()}>SUMMON</button>
             }
