@@ -522,16 +522,16 @@ export default function Home() {
                 Each sale in the Market Place reflects<span className={styles.pclassWhite}>%4</span>distributed to all owners.
               </p>
               <p className={styles.pclassWhite}>
-                Earlier you mint and more Vampires you have, more AVAX reflections you get.
+                Minting early and having more vampires will get you more AVAX reflections.
               </p>
             </div>
 
             <div className={styles.aboutcol}>
               <h3>MECHANICS</h3>
-              <p className={styles.pclass}>Each vampire has born with an unique DNA, unalterable in anyway.</p>
-              <p className={styles.pclass}>This means that your vampire may turn humans (or apes) into rarest vampires in near future.</p>
+              <p className={styles.pclass}>Each vampire is born with an unique DNA, unalterable in any way.</p>
+              <p className={styles.pclass}>This means that your vampire may turn humans (or apes) into rarest tier vampires in near future.</p>
               <p className={styles.pclass}>This also means that your vampire may win toughest encounters in the cold metaverse.</p>
-              <p className={styles.pclassWhite}>Rarest vampires also have rarest DNAs! </p>
+              <p className={styles.pclassWhite}>Rarest tier vampires also have rarest DNAs! </p>
             </div>
 
             <div className={styles.aboutcol}>
