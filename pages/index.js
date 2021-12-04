@@ -368,6 +368,13 @@ export default function Home() {
                   </Link>
                 </li>
                 <li className={styles.navlinksulli}>
+                  <Link href="https://whitepaper.chainedvampires.com/" >
+                    <a className={styles.navlinksullia} target="_blank">
+                      WHITEPAPER
+                    </a>
+                  </Link>
+                </li>
+                <li className={styles.navlinksulli}>
                   <div className={styles.navlinksulliaDisabled}>Marketplace</div>
                 </li>
 
@@ -395,6 +402,11 @@ export default function Home() {
                   <Link href="/inventory">
                     <a className={styles.dropdownContentA}>
                       Inventory
+                    </a>
+                  </Link>
+                  <Link href="https://whitepaper.chainedvampires.com/">
+                    <a className={styles.dropdownContentA} target="_blank">
+                      Whitepaper
                     </a>
                   </Link>
                 </div>
