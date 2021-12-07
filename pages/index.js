@@ -463,8 +463,8 @@ export default function Home() {
               }
               </div>
 
-              <h1 className={styles.mintOpenDate}> MINTING IS ACTIVE! </h1>
-              <h1 className={styles.mintOpenDate2}> CLAIM YOUR VAMPIRE</h1>
+              <h1 className={styles.mintOpenDate}> 50% DISCOUNT! </h1>
+              <h1 className={styles.mintOpenDate2}> ENDS IN DECEMBER 14th</h1>
               {/* {
                 metamaskState === "set" ?
                   <h1 className={styles.mintOpenDate2}> {zeroPad(days, 2)} : {zeroPad(hours, 2)} : {zeroPad(minutes, 2)} : {zeroPad(seconds, 2)} </h1> :
@@ -506,7 +506,7 @@ export default function Home() {
 
           </div>
 
-          <h1 className={styles.mttext}> 1.5 AVAX / Vampire <br />
+          <h1 className={styles.mttext}> 0.75 AVAX / Vampire <br />
             <Image src='/promo.png' alt="promo" width={350} height={120} />
           </h1>
 
