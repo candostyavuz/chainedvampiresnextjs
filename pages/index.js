@@ -540,7 +540,7 @@ export default function Home() {
 
             <div className={styles.aboutcol}>
               <h3>MECHANICS</h3>
-              <p className={styles.pclass}>Each vampire is born with an unique DNA.</p>
+              <p className={styles.pclass}>Each vampire is born with a unique DNA.</p>
               <p className={styles.pclass}>This means that your vampire may turn humans into rarest tier vampires in near future.</p>
               <p className={styles.pclass}>This also means that your vampire may win toughest encounters in the cold metaverse.</p>
               <p className={styles.pclassWhite}>Rarest tier vampires also have rarest DNAs! </p>
