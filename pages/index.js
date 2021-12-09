@@ -464,7 +464,7 @@ export default function Home() {
               </div>
 
               <h1 className={styles.mintOpenDate}> 50% DISCOUNT! </h1>
-              <h1 className={styles.mintOpenDate2}> ENDS IN DECEMBER 14th</h1>
+              <h1 className={styles.mintOpenDate2}> ENDS ON DECEMBER 14th</h1>
               {/* {
                 metamaskState === "set" ?
                   <h1 className={styles.mintOpenDate2}> {zeroPad(days, 2)} : {zeroPad(hours, 2)} : {zeroPad(minutes, 2)} : {zeroPad(seconds, 2)} </h1> :
