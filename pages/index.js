@@ -528,7 +528,7 @@ export default function Home() {
                 Reflectionary minting system distributes<span className={styles.pclassWhite}>20%</span>of each minting fee to all existing vampires.
               </p>
               <p className={styles.pclass}>
-                Vampires care a lot about their original minters. Minter gains<span className={styles.pclassWhite}>%5</span>life-time royalty.
+                Vampires care a lot about their original minters. Minter gains<span className={styles.pclassWhite}>%5</span>life-time royalties on all Chained Vampire Marketplace trades.
               </p>
               <p className={styles.pclass}>
                 Each sale in the Market Place reflects<span className={styles.pclassWhite}>%4</span>distributed to all owners.
@@ -543,15 +543,18 @@ export default function Home() {
               <p className={styles.pclass}>Each vampire is born with a unique DNA.</p>
               <p className={styles.pclass}>This means that your vampire may turn humans into rarest tier vampires in near future.</p>
               <p className={styles.pclass}>This also means that your vampire may win toughest encounters in the cold metaverse.</p>
+              <p className={styles.pclass}><span className={styles.pclassWhite}>ACT-2</span>is all about taking advantage of unique DNA of your Chained Vampire.</p>
               <p className={styles.pclassWhite}>Rarest tier vampires also have rarest DNAs! </p>
             </div>
 
             <div className={styles.aboutcol}>
               <h3>WHY ?</h3>
               <p className={styles.pclass}>
-                Low minting fee:<span className={styles.pclassWhite}>1.5 AVAX</span></p>
+                Low minting fee with bundle options</p>
               <p className={styles.pclass}>
                 High reflection rates.</p>
+              <p className={styles.pclass}>
+                Vampirism experience in the NFT ecosystem.</p>
               <p className={styles.pclass}>
                 Long term vision to be the most respected Vampire legion of the metaverse.</p>
               <p className={styles.pclass}>
