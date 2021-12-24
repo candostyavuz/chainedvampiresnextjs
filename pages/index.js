@@ -431,7 +431,7 @@ export default function Home() {
             }}>
               <h1 className={styles.textboxh1}> THE TIME HAS COME FOR </h1>
               <h1 className={styles.textbox2h1}> VAMPIRES </h1>
-              <h2> ON AVALANCHE COMMUNITY </h2>
+              <h2> ON AVALANCHE </h2>
             </motion.div>
 
             <motion.div initial="hidden" animate="visible" variants={{
