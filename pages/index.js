@@ -785,11 +785,11 @@ export default function Home() {
             <p className={styles.teamP2}>Can is ChainShot certified web3 developer and systems engineer. <br />
               He builds our tech infrastructure.<br />
               He is obessed with decentralized web and believes that <br />the future of web3 will be on Avalanche Network. <br />
-              <Link href="https://twitter.com/candosty_">
+              {/* <Link href="https://twitter.com/candosty_">
                 <a>
                   <Image src="/twitter.png" width={30} height={30} alt="twt" />
                 </a>
-              </Link>
+              </Link> */}
               <Link href="https://www.linkedin.com/in/candosty/">
                 <a>
                   <Image src="/linkedin.png" width={35} height={35} alt="linkedin" />
@@ -826,7 +826,7 @@ export default function Home() {
             </div>
             <p className={styles.teamP2}>Ozan is a pianist, but better at creating awesome UIs. <br />
               He designed most of the visuals on the WebSite and coded the styles.<br />
-              <Link href="https://twitter.com/AkifOzancan">
+              {/* <Link href="https://twitter.com/AkifOzancan">
                 <a>
                   <Image src="/twitter.png" width={30} height={30} alt="twt" />
                 </a>
@@ -835,7 +835,7 @@ export default function Home() {
                 <a>
                   <Image src="/ig-ico.png" width={30} height={30} alt="ig" />
                 </a>
-              </Link>
+              </Link> */}
             </p>
           </div>
 
