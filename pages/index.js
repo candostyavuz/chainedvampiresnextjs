@@ -432,6 +432,8 @@ export default function Home() {
               <h1 className={styles.textboxh1}> THE TIME HAS COME FOR </h1>
               <h1 className={styles.textbox2h1}> VAMPIRES </h1>
               <h2> ON AVALANCHE </h2>
+              <Image src="/logomain.png" alt="logomain" width={150} height={150} />
+
             </motion.div>
 
             <motion.div initial="hidden" animate="visible" variants={{
