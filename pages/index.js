@@ -429,9 +429,9 @@ export default function Home() {
                 }
               }
             }}>
-              <h1 className={styles.textboxh1}> THE TIME HAS COME FOR </h1>
-              <h1 className={styles.textbox2h1}> VAMPIRES </h1>
-              <h2> ON AVALANCHE </h2>
+              <h1 className={styles.textboxh1}> START YOUR P2E JOURNEY</h1>
+              <h1 className={styles.textbox2h1}> WITH VAMPIRES </h1>
+              <h1 className={styles.textboxh1}> ON AVALANCHE </h1>
 
             </motion.div>
 
