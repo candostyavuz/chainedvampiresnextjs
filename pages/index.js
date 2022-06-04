@@ -367,13 +367,13 @@ export default function Home() {
                     </a>
                   </Link>
                 </li>
-                <li className={styles.navlinksulli}>
+                {/* <li className={styles.navlinksulli}>
                   <Link href="https://whitepaper.chainedvampires.com/" >
                     <a className={styles.navlinksullia} target="_blank">
                       WHITEPAPER
                     </a>
                   </Link>
-                </li>
+                </li> */}
 
                 <span className={styles.claim}>
                   Rewards :
