@@ -496,11 +496,13 @@ export default function Home() {
               <input onKeyDown={(e) => { e.preventDefault() }} id="mintBar" className={styles.inputclass} type="number" min="1" max="20" value={mintAmount} onChange={(event) => updateMintAmount(event)} />
             </div>
 
-            <div >{metamaskState == 'set' ?
+            {/* <div >{metamaskState == 'set' ?
               <button className={styles.vampbutton} onClick={() => mintNFT()}>SUMMON</button> :
               <button disabled className={styles.vampbuttondisabled} onClick={() => mintNFT()}>SUMMON</button>
             }
-            </div>
+            </div> */}
+            <button disabled className={styles.vampbuttondisabled} onClick={() => mintNFT()}>PAUSED!</button>
+
 
           </div>
 
