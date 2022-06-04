@@ -6,15 +6,9 @@ const Footer = () => {
 
     return (
         <div className="footer">
-            <a href="https://discord.gg/v5AM7VqRFj">
-                <Image src="/dc.png" alt="dclogo" width={60} height={60} />
-            </a>
             <a href="https://twitter.com/AvaxVampiresNFT">
                 <Image src="/twitter.png" alt="twitterlogo" width={60} height={60} />
-            </a>
-            <a href="https://medium.com/@chainedvampires/chained-vampires-reflectionary-nfts-on-avalanche-blockchain-f7167c37b452">
-                <Image src="/mediumicon.png" alt="mediumlogo" width={60} height={60} />
-            </a>
+            </a>            
             <style jsx>{`
                 .footer{
                     background: linear-gradient(rgba(21, 4, 3, 0.747), rgba(63, 0, 0, 0.87));
@@ -27,6 +21,7 @@ const Footer = () => {
                 }
             `}</style>
         </div>
+        
     );
 }
 
