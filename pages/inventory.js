@@ -62,6 +62,9 @@ export default function Inventory() {
             let uri = organizeURI(tokenUri);
             try {
                 const meta = await axios.get(uri)
+                // const meta = JSON.parse(uri); 
+                // console.log("meta is: " + meta)
+
                 let item;
                 if (meta.data.name.toString().includes("Lord Dracula") || meta.data.name.toString().includes("Draxo")) {
                     item = {
@@ -124,10 +127,12 @@ export default function Inventory() {
     }
 
     function organizeURI(_uri) {
-        // const gateWay = "https://gateway.pinata.cloud/ipfs/";
-        const gateWay = "https://chainedvampires.mypinata.cloud/ipfs/";
+        const gateWay = "https://gateway.ipfs.io/ipfs/";
+        // console.log("Start URI substr: " + _uri.toString().substring(7))
+        // const gateWay = "https://chainedvampires.mypinata.cloud/ipfs/";
         let uri = _uri.toString().substring(7);
         uri = gateWay + uri;
+        console.log("Last URI: " + uri)
         return uri;
     }
 
