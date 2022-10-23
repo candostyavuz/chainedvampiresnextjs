@@ -462,7 +462,7 @@ export default function Home() {
               </div>
 
               <h1 className={styles.mintOpenDate}> MINTING IS PAUSED! </h1>
-              <h1 className={styles.mintOpenDate2}> V2 Migration is under construction!</h1>
+              <h1 className={styles.mintOpenDate2}> Reflectionary NFTs on Avalanche!</h1>
               {/* {
                 metamaskState === "set" ?
                   <h1 className={styles.mintOpenDate2}> {zeroPad(days, 2)} : {zeroPad(hours, 2)} : {zeroPad(minutes, 2)} : {zeroPad(seconds, 2)} </h1> :
